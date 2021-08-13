@@ -21,7 +21,7 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <!-- Primary Meta Tags -->
-    <title>LaunchED - Home</title>
+    <title>LaunchED - Instructors</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="title" content="Neumorphism UI - About us">
     <meta name="author" content="Themesberg">
@@ -82,6 +82,7 @@
 </head>
 
 <body>
+    <!-- HEADER -->
     <header class="header-global">
         <nav id="navbar-main" aria-label="Primary navigation"
             class="navbar navbar-main navbar-expand-lg navbar-theme-primary headroom navbar-light">
@@ -89,13 +90,12 @@
                 <a href="/" class="btn btn-primary" style="color:black; font-weight:bold"></i> LaunchED</a>
                 <div class="d-flex align-items-center">
 
-
                     <div class="Authentication">
                         {% if user.is_authenticated %}
                             {% if user.is_student %}
-                                <a href="profile" class="btn btn-primary text-secondary mr-3"><i
+                                <a href="../profile" class="btn btn-primary text-secondary mr-3"><i
                                         class="fas fa-user-astronaut"></i> {{user.first_name}} Profile</a>
-                                <a href="logout" class="btn btn-primary text-secondary mr-3"><i
+                                <a href="../logout" class="btn btn-primary text-secondary mr-3"><i
                                         class="far fa-paper-plane mr-2"></i> Sign out</a>
                                 <button class="navbar-toggler ml-2" type="button" data-toggle="collapse"
                                     data-target="#navbar_global" aria-controls="navbar_global" aria-expanded="false"
@@ -103,9 +103,9 @@
                                     <span class="navbar-toggler-icon"></span>
                                 </button>
                             {% elif user.is_instructor %}
-                                <a href="profile" class="btn btn-primary text-secondary mr-3"><i
+                                <a href="../profile" class="btn btn-primary text-secondary mr-3"><i
                                     class="fas fa-user-astronaut"></i> {{user.first_name}} Profile</a>
-                                <a href="logout" class="btn btn-primary text-secondary mr-3"><i
+                                <a href="../logout" class="btn btn-primary text-secondary mr-3"><i
                                         class="far fa-paper-plane mr-2"></i> Sign out</a>
                                 <button class="navbar-toggler ml-2" type="button" data-toggle="collapse"
                                     data-target="#navbar_global" aria-controls="navbar_global" aria-expanded="false"
@@ -113,11 +113,11 @@
                                     <span class="navbar-toggler-icon"></span>
                                 </button>
                             {% else %}
-                                <a href="login" class="btn btn-primary text-secondary mr-3"><i class="far fa-user"></i>
+                                <a href="../login" class="btn btn-primary text-secondary mr-3"><i class="far fa-user"></i>
                                     Sign in</a>
-                                <a href="registerStudent" class="btn btn-primary text-secondary mr-3"><i
+                                <a href="../registerStudent" class="btn btn-primary text-secondary mr-3"><i
                                         class="fas fa-user-astronaut"></i> Student Sign up</a>
-                                <a href="registerInstructor" class="btn btn-primary text-secondary mr-3"><i
+                                <a href="../registerInstructor" class="btn btn-primary text-secondary mr-3"><i
                                         class="far fa-paper-plane mr-2"></i> Instructor Sign up</a>
                                 <button class="navbar-toggler ml-2" type="button" data-toggle="collapse"
                                     data-target="#navbar_global" aria-controls="navbar_global" aria-expanded="false"
@@ -125,11 +125,11 @@
                                     <span class="navbar-toggler-icon"></span>
                             {% endif %}
                         {% else %}
-                            <a href="login" class="btn btn-primary text-secondary mr-3"><i class="far fa-user"></i>
+                            <a href="../login" class="btn btn-primary text-secondary mr-3"><i class="far fa-user"></i>
                                 Sign in</a>
-                            <a href="registerStudent" class="btn btn-primary text-secondary mr-3"><i
+                            <a href="../registerStudent" class="btn btn-primary text-secondary mr-3"><i
                                     class="fas fa-user-astronaut"></i> Student Sign up</a>
-                            <a href="registerInstructor" class="btn btn-primary text-secondary mr-3"><i
+                            <a href="../registerInstructor" class="btn btn-primary text-secondary mr-3"><i
                                     class="far fa-paper-plane mr-2"></i> Instructor Sign up</a>
                             <button class="navbar-toggler ml-2" type="button" data-toggle="collapse"
                                 data-target="#navbar_global" aria-controls="navbar_global" aria-expanded="false"
@@ -138,86 +138,70 @@
                         {% endif %}
                     </div>
 
-                
                 </div>
             </div>
         </nav>
     </header>
+    <!-- END OF HEADER -->
     <main>
         <!-- Hero -->
         <div class="section section-header pb-7">
             <div class="container">
                 <div class="row justify-content-center">
                     <div class="col-12 col-lg-8 text-center">
-                        <h1 class="display-2 mb-4">We are LaunchED</h1>
-                        <p class="lead mb-5">LaunchED is an educational platform. Instructors can create a course and
-                            students
-                            can enroll in those courses. </p>
+                        <h1 class="display-2 mb-4">Instructors on our Platform</h1>
                     </div>
                 </div>
             </div>
             <!-- End of Hero section -->
             <section class="section section-lg pt-0">
                 <div class="container">
-                    <div class="row justify-content-center mb-5">
-                        <h2 class="h1">Explore</h2>
-                    </div>
                     <center>
                         <div class="row">
-                                <div id="instructor" onclick="clickHandler('instructor')"
-                                    class="col-12 col-md-6 col-lg-4">
-                                    <!-- Profile Card -->
-                                    <div class="card bg-primary shadow-soft border-light text-center py-4 mb-5">
-                                        <div
-                                            class="profile-image shadow-inset border border-light bg-primary rounded-circle p-3 mx-auto">
-                                            <img src="static/assets/img/team/profile-picture-1.jpg"
-                                                class="card-img-top shadow-soft p-2 border border-light rounded-circle"
-                                                alt="Neil Avatar">
-                                        </div>
-                                        <div class="card-body">
-                                            <h3 class="h5 mb-2">Instructor</h3>
-
-                                        </div>
-                                    </div>
-                                    <!-- End of Profile Card -->
-                                </div>
-                            <div id="sample" onclick="clickHandler('sample')" class="col-12 col-md-6 col-lg-4">
+                            <div class="col-12 col-md-6 col-lg-4">
                                 <!-- Profile Card -->
+                                {% for instructor in instructors %}
                                 <div class="card bg-primary shadow-soft border-light text-center py-4 mb-5">
                                     <div
                                         class="profile-image shadow-inset border border-light bg-primary rounded-circle p-3 mx-auto">
-                                        <img src="static/assets/img/team/profile-picture-3.jpg"
+                                        <img src="static/assets/img/team/profile-picture-1.jpg"
                                             class="card-img-top shadow-soft p-2 border border-light rounded-circle"
-                                            alt="Bonnie Avatar">
+                                            alt="Neil Avatar">
                                     </div>
                                     <div class="card-body">
-                                        <h3 class="h5 mb-2">Sample Certificate</h3>
+                                        <h3 class="h5 mb-2">{{ instructor.fname}} {{ instructor.lname}}</h3>
+                                        <ul class="list-unstyled justify-content-center mt-3 mb-4">
+                                            <li>
+                                                Email ID: {{ instructor.email }}
+                                            </li>
+                                            <li>
+                                                Qualification: {{instructor.qualification}}
+                                            </li>
+                                            <li>
+                                                About: {{instructor.description}}
+                                            </li>
+                                            <li>
+                                                Courses published: 
+                                                {% for course in courses %}
+                                                <ul class="list-unstyled justify-content-center">
+                                                    {% if course.instructor.email == instructor.email %}
+                                                        <li>{{course.name}}</li>
+                                                    {% endif %}
+                                                </ul>
+                                                {% endfor %}
+                                            </li>
+                                        </ul>
                                     </div>
                                 </div>
+                                {%endfor%}
                                 <!-- End of Profile Card -->
                             </div>
-                            <div id="course" onclick="clickHandler('course')" class="col-12 col-md-6 col-lg-4">
-                                <!-- Profile Card -->
-                                <div class="card bg-primary shadow-soft border-light text-center py-4 mb-5">
-                                    <div
-                                        class="profile-image shadow-inset border border-light bg-primary rounded-circle p-3 mx-auto">
-                                        <img src="static/assets/img/team/profile-picture-2.jpg"
-                                            class="card-img-top shadow-soft p-2 border border-light rounded-circle"
-                                            alt="Christopher avatar">
-                                    </div>
-                                    <div class="card-body">
-                                        <h3 class="h5 mb-2">Courses</h3>
-                                    </div>
-                                </div>
-                                <!-- End of Profile Card -->
-                            </div>
+                        </div>
                     </center>
                 </div>
-        </div>
-        </section>
+            </section>
     </main>
-
-    <!--FOOTER-->
+    <!-- FOOTER -->
     <footer class="d-flex pb-5 pt-6 pt-md-7 border-top border-light bg-primary">
         <div class="container">
             <div class="row">
@@ -244,13 +228,15 @@
             <div class="row">
                 <div class="col">
                     <div class="d-flex text-center justify-content-center align-items-center" role="contentinfo">
-                        <p class="font-weight-normal font-small mb-0">made with ♥ by Mohammed Sanaullah and Tanmayi D.
+                        <p class="font-weight-normal font-small mb-0">made with ♥ by Mohammed Sanaullah and Tanmayi
+                            D.
                         </p>
                     </div>
                 </div>
             </div>
         </div>
     </footer>
+    <!-- END OF FOOTER -->
 
     <!-- Core -->
     <script src="static/vendor/jquery/dist/jquery.min.js"></script>
@@ -274,12 +260,5 @@
     <!-- Neumorphism JS -->
     <script src="static/assets/js/neumorphism.js"></script>
 </body>
-<script>
-    function clickHandler(x) {
-        if (x == "instructor") window.location = "http://localhost:8000/instructors/"
-        else if (x == "course") window.location = "http://localhost:8000/courses/"
-        else window.location = "http://localhost:8000/sampleCertificate/"
-    }
-</script>
 
 </html>

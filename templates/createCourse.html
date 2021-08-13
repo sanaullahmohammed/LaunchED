@@ -1,0 +1,296 @@
+<!--
+
+=========================================================
+* Neumorphism UI - v1.0.0
+=========================================================
+
+* Product Page: https://themesberg.com/product/ui-kits/neumorphism-ui
+* Copyright 2020 Themesberg MIT LICENSE (https://www.themesberg.com/licensing#mit)
+
+* Coded by https://themesberg.com
+
+=========================================================
+
+* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+-->
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <!-- Primary Meta Tags -->
+    <title>LaunchED - Profile</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="title" content="Neumorphism UI - About us">
+    <meta name="author" content="Themesberg">
+
+    <link rel="canonical" href="https://themesberg.com/product/ui-kits/neumorphism-ui/" />
+
+    <!--  Social tags -->
+    <meta name="keywords"
+        content="neumorphism, neumorphism ui, neomorphism, neomorphism ui, neomorphism css, neumorphism css, neumorph, neumorphic, design system, login, form, table, tables, card, cards, navbar, modal, icons, icons, map, chat, carousel, menu, datepicker, gallery, slider, date, social, dropdown, search, tab, nav, footer, date picker, forms, tabs, time, button, select, input, timeline, cart, about us, account, log in, blog, profile, portfolio, landing page, ecommerce, shop, landing, register, app, contact, one page, sign up, signup, store, bootstrap 4, bootstrap4, dashboard, bootstrap 4 dashboard, bootstrap 4 design, bootstrap 4 system, bootstrap 4, bootstrap 4 uit kit, bootstrap 4 kit, themesberg, html kit, html css template, web template, bootstrap, bootstrap 4, css3 template, frontend, responsive bootstrap template, bootstrap ui kit, responsive ui kit">
+    <meta name="description"
+        content="Start developing neumorphic web applications and pages using Neumorphism UI. It features over 100 individual components and 5 example pages.">
+
+    <!-- Schema.org markup for Google+ -->
+    <meta itemprop="name" content="Neumorphism UI by Themesberg">
+    <meta itemprop="description"
+        content="Start developing neumorphic web applications and pages using Neumorphism UI. It features over 100 individual components and 5 example pages.">
+    <meta itemprop="image"
+        content="https://themesberg.s3.us-east-2.amazonaws.com/public/products/neumorphism-ui/neumorphism-thumbnail.jpg">
+
+    <!-- Twitter Card data -->
+    <meta name="twitter:card" content="product">
+    <meta name="twitter:site" content="@themesberg">
+    <meta name="twitter:title" content="Neumorphism UI by Themesberg">
+    <meta name="twitter:description"
+        content="Start developing neumorphic web applications and pages using Neumorphism UI. It features over 100 individual components and 5 example pages.">
+    <meta name="twitter:creator" content="@themesberg">
+    <meta name="twitter:image"
+        content="https://themesberg.s3.us-east-2.amazonaws.com/public/products/neumorphism-ui/neumorphism-thumbnail.jpg">
+
+    <!-- Open Graph data -->
+    <meta property="fb:app_id" content="214738555737136">
+    <meta property="og:title" content="Neumorphism UI by Themesberg" />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://demo.themesberg.com/neumorphism-ui/" />
+    <meta property="og:image"
+        content="https://themesberg.s3.us-east-2.amazonaws.com/public/products/neumorphism-ui/neumorphism-thumbnail.jpg" />
+    <meta property="og:description"
+        content="Start developing neumorphic web applications and pages using Neumorphism UI. It features over 100 individual components and 5 example pages." />
+    <meta property="og:site_name" content="Themesberg" />
+
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="120x120" href="static/assets/img/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="static/assets/img/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="static/assets/img/favicon/favicon-16x16.png">
+    <link rel="manifest" href="static/assets/img/favicon/site.webmanifest">
+    <link rel="mask-icon" href="static/assets/img/favicon/safari-pinned-tab.svg" color="#ffffff">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="theme-color" content="#ffffff">
+
+    <!-- Fontawesome -->
+    <link type="text/css" href="../../static/vendor/@fortawesome/fontawesome-free/css/all.min.css" rel="stylesheet">
+
+    <!-- Pixel CSS -->
+    <link type="text/css" href="../../static/css/neumorphism.css" rel="stylesheet">
+
+    <!-- NOTICE: You can use the _analytics.html partial to include production code specific code & trackers -->
+
+</head>
+
+<body>
+    <!-- HEADER -->
+    <header class="header-global">
+        <nav id="navbar-main" aria-label="Primary navigation"
+            class="navbar navbar-main navbar-expand-lg navbar-theme-primary headroom navbar-light">
+            <div class="container position-relative">
+                <a href="/" class="btn btn-primary" style="color:black; font-weight:bold"></i> LaunchED</a>
+                <div class="d-flex align-items-center">
+                    <a href="../logout" class="btn btn-primary text-secondary mr-3"><i
+                            class="far fa-paper-plane mr-2"></i> Log out</a>
+                    <button class="navbar-toggler ml-2" type="button" data-toggle="collapse"
+                        data-target="#navbar_global" aria-controls="navbar_global" aria-expanded="false"
+                        aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <!-- END OF HEADER -->
+    <main>
+
+        
+        <!-- Form Section -->
+        <section class="min-vh-100 d-flex bg-primary align-items-center">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-12 col-md-8 col-lg-6 justify-content-center">
+                        <div class="card bg-primary shadow-soft border-light p-4">
+                            <div class="card-header text-center pb-0">
+                                <h2 class="mb-0 h5">Create Instructor Account</h2>
+                            </div>
+                            <div class="card-body">
+                                <form method="POST">
+                                    {% csrf_token %}
+                                    <!-- Form -->
+                                    <div class="form-group">
+                                        <label for="exampleInputIcon4">Course Name</label>
+                                        <div class="input-group mb-4">
+                                            <div class="input-group-prepend">
+                                                <span class="input-group-text"><span
+                                                        class="fas fa-book-reader mr-2"></span></span>
+                                            </div>
+                                            <input class="form-control" name="Cname" placeholder="Course Name"
+                                                type="text" aria-label="first name">
+                                        </div>
+                                    </div>
+                                    <!-- End of Form -->
+                                   <!-- Form -->
+                                    <div class="form-group">
+                                        <label for="inlineFormCustomSelectPref">Course Certifier</label>
+                                        <div class="input-group">
+                                            <div class="input-group-prepend">
+                                                <span class="input-group-text"><span
+                                                        class="fas fa-book-open"></span></span>
+                                            </div>
+                                            <select class="custom-select my-1 mr-sm-2" name="Ccertifier" id="id_certifier">
+                                                <option selected="selected">Choose...</option>
+                                                {% for ele in certifier %}
+                                                    <option value="{{ele.id}}">{{ele.name}}</option>
+                                                {% endfor %}
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <!--End of Form-->
+                                    <!-- Form -->
+                                    <div class="form-group">
+                                        <label for="exampleInputIcon4">Course Description</label>
+                                        <div class="input-group mb-4">
+                                            <div class="input-group-prepend">
+                                                <span class="input-group-text"><span
+                                                        class="far fa-file-alt"></span></span>
+                                            </div>
+                                            <input class="form-control" name="Cdesc" placeholder="Description"
+                                                type="text" aria-label="first name" rows="3">
+                                        </div>
+                                    </div>
+                                    <!-- End of Form -->
+                            </div>
+                            <button type="submit" class="btn btn-block btn-primary">Publish</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </section>
+        <!--End of Form Section-->
+
+            <!--Hero section-->
+            <div class="section section-header pb-4">
+                <div class="container">
+                    <div class="row justify-content-center">
+                    <div class="col-12 col-lg-8 text-center">
+                        <h1 class="display-2 mb-4">Number of Courses Published: {{user.inst_course}}</h1>
+                    </div>
+                </div>
+            </div>
+            <!-- End of Hero section -->
+
+            <!--Main Card-->
+            <section class="section section-lg pt-0">
+                <div class="container">
+                    <center>
+                        <div class="row">
+                            <div class="col-12 col-md-6 col-lg-4">
+                                <!-- Profile Card -->
+                                {% for course in courses %}
+                                <div class="card bg-primary shadow-soft border-light text-center py-4 mb-5">
+                                    <div
+                                        class="profile-image shadow-inset border border-light bg-primary rounded-circle p-3 mx-auto">
+                                        <img src="../static/assets/img/team/profile-picture-1.jpg"
+                                            class="card-img-top shadow-soft p-2 border border-light rounded-circle"
+                                            alt="Neil Avatar">
+                                    </div>
+                                    <div class="card-body">
+                                        <h3 class="h5 mb-2">{{ course.name}}</h3>
+                                        <ul class="list-unstyled justify-content-center mt-3 mb-4">
+                                            <li>
+                                                Instructor: {{ course.instructor.fname}} {{ course.instructor.lname}}
+                                            </li>
+                                            <li>
+                                                Certifier: {{course.certifier.name}}
+                                            </li>
+                                            <li>
+                                                Publish Date: {{course.publish_date}}
+                                            </li>
+                                            <li>
+                                                Description: {{course.description}}
+                                            </li>
+                                        </ul>
+                                        <a href="/Profile/CreateCourse/{{ course.id }}/" class="btn btn-primary text-secondary mr-3"><i
+                                        class="far fa-paper-plane mr-2"></i> Delete</a>
+                                            <button class="navbar-toggler ml-2" type="button" data-toggle="collapse"
+                                            data-target="#navbar_global" aria-controls="navbar_global" aria-expanded="false"
+                                            aria-label="Toggle navigation">
+                                            <span class="navbar-toggler-icon"></span>
+                                    </div>
+                                </div>
+                                {%endfor%}
+                                <!-- End of Profile Card -->
+                            </div>
+                        </div>
+                    </center>
+                </div>
+            </section>
+            <!--End of Main Card-->
+            
+    </main>
+    <!-- FOOTER -->
+    <footer class="d-flex pb-5 pt-6 pt-md-7 border-top border-light bg-primary">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-10 col-lg-8">
+                    <div class="nav-wrapper position-relative mb-4">
+                        <ul class="nav nav-pills nav-fill flex-column flex-md-row" id="tabs-icon-text" role="tablist">
+                            <li class="nav-item">
+                                <a href="/" class="btn btn-primary"><i class="fas fa-tachometer-alt mr-2"></i>
+                                    About Us</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../contactUs" class="btn btn-primary"><i class="fas fa-headphones"></i>
+                                    Contact Us</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../termsOfUse" class="btn btn-primary"><i class="fas fa-book-open"></i>
+                                    Terms and Conditions</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <hr class="my-5">
+            <div class="row">
+                <div class="col">
+                    <div class="d-flex text-center justify-content-center align-items-center" role="contentinfo">
+                        <p class="font-weight-normal font-small mb-0">made with ♥ by Mohammed Sanaullah and Tanmayi
+                            D.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- END OF FOOTER -->
+
+    <!-- Core -->
+    <script src="../static/vendor/jquery/dist/jquery.min.js"></script>
+    <script src="../static/vendor/popper.js/dist/umd/popper.min.js"></script>
+    <script src="../static/vendor/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="../static/vendor/headroom.js/dist/headroom.min.js"></script>
+
+    <!-- Vendor JS -->
+    <script src="../static/vendor/onscreen/dist/on-screen.umd.min.js"></script>
+    <script src="../static/vendor/nouislider/distribute/nouislider.min.js"></script>
+    <script src="../static/vendor/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js"></script>
+    <script src="../static/vendor/waypoints/lib/jquery.waypoints.min.js"></script>
+    <script src="../static/vendor/jarallax/dist/jarallax.min.js"></script>
+    <script src="../static/vendor/jquery.counterup/jquery.counterup.min.js"></script>
+    <script src="../static/vendor/jquery-countdown/dist/jquery.countdown.min.js"></script>
+    <script src="../static/vendor/smooth-scroll/dist/smooth-scroll.polyfills.min.js"></script>
+    <script src="../static/vendor/prismjs/prism.js"></script>
+
+    <script async defer src="https://buttons.github.io/buttons.js"></script>
+
+    <!-- Neumorphism JS -->
+    <script src="../static/assets/js/neumorphism.js"></script>
+</body>
+
+
+
+
+</html>
