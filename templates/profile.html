@@ -63,11 +63,11 @@
     <meta property="og:site_name" content="Themesberg" />
 
     <!-- Favicon -->
-    <link rel="apple-touch-icon" sizes="120x120" href="static/assets/img/favicon/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="static/assets/img/favicon/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="static/assets/img/favicon/favicon-16x16.png">
-    <link rel="manifest" href="static/assets/img/favicon/site.webmanifest">
-    <link rel="mask-icon" href="static/assets/img/favicon/safari-pinned-tab.svg" color="#ffffff">
+    <link rel="apple-touch-icon" sizes="120x120" href="../static/assets/img/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../static/assets/img/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../static/assets/img/favicon/favicon-16x16.png">
+    <link rel="manifest" href="../static/assets/img/favicon/site.webmanifest">
+    <link rel="mask-icon" href="../static/assets/img/favicon/safari-pinned-tab.svg" color="#ffffff">
     <meta name="msapplication-TileColor" content="#ffffff">
     <meta name="theme-color" content="#ffffff">
 
@@ -96,7 +96,7 @@
                         <a href="/" class="btn btn-primary" style="color:black; font-weight:bold"></i> LaunchED</a>
                         <div class="d-flex align-items-center">
                             <a href="myCourses" class="btn btn-primary text-secondary mr-3"><i 
-                                class=" fas fa-book-open"></i>My Courses</a>
+                                class=" fas fa-book-open"></i> My Courses</a>
                             <a href="profileUpdate" class="btn btn-primary text-secondary mr-3"><i
                                     class="fas fa-user-astronaut"></i> Update Profile</a>
                             <a href="profileDelete" class="btn btn-primary text-secondary mr-3"><i
@@ -128,7 +128,7 @@
                 <div class="container">
                     <center>
                         <div class="row">
-                            <div class="col-12 col-md-6 col-lg-4">
+                            <div class="col-12 ">
                                 <!-- Profile Card -->
                                 <div class="card bg-primary shadow-soft border-light text-center py-4 mb-5">
                                     <div
@@ -141,37 +141,36 @@
                                         <h3 class="h5 mb-2">{{Students.fname}} {{Students.lname}}</h3>
                                         <ul class="list-unstyled justify-content-center mt-3 mb-4">
                                             <li>
-                                                Email ID: {{ Students.email }}
+                                                <strong>Email ID:</strong> {{ Students.email }}
                                             </li>
                                             <li>
-                                                Date of Birth: {{ Students.DOB }}
+                                                <strong>Date of Birth:</strong> {{ Students.DOB }}
                                             </li>
                                             <li>
-                                                Gender: {{ Students.sex }}
+                                                <strong>Gender:</strong> {{ Students.sex }}
                                             </li>
                                             <li>
-                                                Year of Study: {{Students.qualification}}
+                                                <strong>Year of Study:</strong> {{Students.qualification}}
                                             </li>
                                             <li>
-                                                Date of Joining: {{Students.datejoined}}
+                                                <strong>Date of Joining:</strong> {{Students.datejoined}}
                                             </li>
                                             <li>
-                                                Number of Courses Enrolled: {{user.enrolled_course_number}}
+                                                <strong>Number of Courses Enrolled:</strong> {{user.enrolled_course_number}}
                                             </li>
                                             <li>
-                                                Enrolled Courses: 
+                                                <strong>Enrolled Courses:</strong> <br>
                                                 {% for course in enrolled %}
                                                 <ul class="list-unstyled justify-content-center">
-                                                    <li>{{course.course.name}}
-                                                            <a href="/Profile/{{ course.id }}/" class="btn btn-primary text-secondary mr-3"><i 
-                                                                class=" fas fa-exclamation-circle"></i>Unroll</a>
+                                                    <li><strong>{{course.course.name}}</strong>
+                                                            <a href="/profile/{{ course.id }}/" class="btn btn-primary text-secondary mr-3"><i 
+                                                                class=" fas fa-exclamation-circle"></i>Unroll</a><br>
                                                                 <button class="navbar-toggler ml-2" type="button" data-toggle="collapse"
                                                                     data-target="#navbar_global" aria-controls="navbar_global" aria-expanded="false"
                                                                     aria-label="Toggle navigation">
                                                                     <span class="navbar-toggler-icon"></span>
                                                                 </button>
-                                                            <b>Unroll</b>
-                                                        </a>
+                                                            </a>
                                                     </li>
                                                 </ul>
                                                 {% endfor %}
@@ -229,7 +228,7 @@
                 <div class="container">
                     <center>
                         <div class="row">
-                            <div class="col-12 col-md-6 col-lg-4">
+                            <div class="col-12 ">
                                 <!-- Profile Card -->
                                 <div class="card bg-primary shadow-soft border-light text-center py-4 mb-5">
                                     <div
@@ -242,31 +241,31 @@
                                         <h3 class="h5 mb-2">{{Instructors.fname}} {{Instructors.lname}}</h3>
                                         <ul class="list-unstyled justify-content-center mt-3 mb-4">
                                             <li>
-                                                Email ID: {{ Instructors.email }}
+                                                <strong>Email ID:</strong> {{ Instructors.email }}
                                             </li>
                                             <li>
-                                                Date of Birth: {{ Instructors.DOB }}
+                                                <strong>Date of Birth:</strong> {{ Instructors.DOB }}
                                             </li>
                                             <li>
-                                                Age: {{ Instructors.age }}
+                                                <strong>Age:</strong> {{ Instructors.age }}
                                             </li>
                                             <li>
-                                                Gender: {{ Instructors.sex }}
+                                                <strong>Gender:</strong> {{ Instructors.sex }}
                                             </li>
                                             <li>
-                                                Qualificatio: {{Instructors.qualification}}
+                                                <strong>Qualification:</strong> {{Instructors.qualification}}
                                             </li>
                                             <li>
-                                                Date of Joining: {{Instructors.date_joined}}
+                                                <strong>Date of Joining:</strong> {{Instructors.date_joined}}
                                             </li>
                                             <li>
-                                                About you: {{Instructors.description}}
+                                                <strong>About you:</strong> {{Instructors.description}}
                                             </li>
                                             <li>
-                                                Courses Published: 
+                                                <strong>Courses Published:</strong><br> 
                                                 {% for course in courses %}
                                                 <ul class="list-unstyled justify-content-center">
-                                                    <li>{{course.name}}
+                                                    <li>{{course.name}}<br>
                                                     </li>
                                                 </ul>
                                                 {% endfor %}
@@ -324,26 +323,26 @@
     <!-- END OF FOOTER -->
 
     <!-- Core -->
-    <script src="static/vendor/jquery/dist/jquery.min.js"></script>
-    <script src="static/vendor/popper.js/dist/umd/popper.min.js"></script>
-    <script src="static/vendor/bootstrap/dist/js/bootstrap.min.js"></script>
-    <script src="static/vendor/headroom.js/dist/headroom.min.js"></script>
+    <script src="../static/vendor/jquery/dist/jquery.min.js"></script>
+    <script src="../static/vendor/popper.js/dist/umd/popper.min.js"></script>
+    <script src="../static/vendor/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="../static/vendor/headroom.js/dist/headroom.min.js"></script>
 
     <!-- Vendor JS -->
-    <script src="static/vendor/onscreen/dist/on-screen.umd.min.js"></script>
-    <script src="static/vendor/nouislider/distribute/nouislider.min.js"></script>
-    <script src="static/vendor/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js"></script>
-    <script src="static/vendor/waypoints/lib/jquery.waypoints.min.js"></script>
-    <script src="static/vendor/jarallax/dist/jarallax.min.js"></script>
-    <script src="static/vendor/jquery.counterup/jquery.counterup.min.js"></script>
-    <script src="static/vendor/jquery-countdown/dist/jquery.countdown.min.js"></script>
-    <script src="static/vendor/smooth-scroll/dist/smooth-scroll.polyfills.min.js"></script>
-    <script src="static/vendor/prismjs/prism.js"></script>
+    <script src="../static/vendor/onscreen/dist/on-screen.umd.min.js"></script>
+    <script src="../static/vendor/nouislider/distribute/nouislider.min.js"></script>
+    <script src="../static/vendor/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js"></script>
+    <script src="../static/vendor/waypoints/lib/jquery.waypoints.min.js"></script>
+    <script src="../static/vendor/jarallax/dist/jarallax.min.js"></script>
+    <script src="../static/vendor/jquery.counterup/jquery.counterup.min.js"></script>
+    <script src="../static/vendor/jquery-countdown/dist/jquery.countdown.min.js"></script>
+    <script src="../static/vendor/smooth-scroll/dist/smooth-scroll.polyfills.min.js"></script>
+    <script src="../static/vendor/prismjs/prism.js"></script>
 
     <script async defer src="https://buttons.github.io/buttons.js"></script>
 
     <!-- Neumorphism JS -->
-    <script src="static/assets/js/neumorphism.js"></script>
+    <script src="../static/assets/js/neumorphism.js"></script>
 </body>
 
 

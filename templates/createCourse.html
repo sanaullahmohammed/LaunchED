@@ -21,7 +21,7 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <!-- Primary Meta Tags -->
-    <title>LaunchED - Profile</title>
+    <title>LaunchED - Add Course</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="title" content="Neumorphism UI - About us">
     <meta name="author" content="Themesberg">
@@ -103,6 +103,19 @@
     <!-- END OF HEADER -->
     <main>
 
+    <!--ALERT-->
+    {% if messages %}
+    {% for message in messages %}
+    <div class="alert alert-info alert-dismissible shadow-soft fade show" role="alert">
+        <span class="alert-inner--icon"><span class="far fa-bell"></span></span>
+        <span class="alert-inner--text"><strong>{{message}}</strong></span>
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+    {%  endfor %}
+    {% endif %}
+    <!--END OF ALERT-->
         
         <!-- Form Section -->
         <section class="min-vh-100 d-flex bg-primary align-items-center">
@@ -212,7 +225,7 @@
                                                 Description: {{course.description}}
                                             </li>
                                         </ul>
-                                        <a href="/Profile/CreateCourse/{{ course.id }}/" class="btn btn-primary text-secondary mr-3"><i
+                                        <a href="/profile/createCourse/{{ course.id }}/" class="btn btn-primary text-secondary mr-3"><i
                                         class="far fa-paper-plane mr-2"></i> Delete</a>
                                             <button class="navbar-toggler ml-2" type="button" data-toggle="collapse"
                                             data-target="#navbar_global" aria-controls="navbar_global" aria-expanded="false"
@@ -268,26 +281,26 @@
     <!-- END OF FOOTER -->
 
     <!-- Core -->
-    <script src="../static/vendor/jquery/dist/jquery.min.js"></script>
-    <script src="../static/vendor/popper.js/dist/umd/popper.min.js"></script>
-    <script src="../static/vendor/bootstrap/dist/js/bootstrap.min.js"></script>
-    <script src="../static/vendor/headroom.js/dist/headroom.min.js"></script>
+    <script src="../../static/vendor/jquery/dist/jquery.min.js"></script>
+    <script src="../../static/vendor/popper.js/dist/umd/popper.min.js"></script>
+    <script src="../../static/vendor/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="../../static/vendor/headroom.js/dist/headroom.min.js"></script>
 
     <!-- Vendor JS -->
-    <script src="../static/vendor/onscreen/dist/on-screen.umd.min.js"></script>
-    <script src="../static/vendor/nouislider/distribute/nouislider.min.js"></script>
-    <script src="../static/vendor/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js"></script>
-    <script src="../static/vendor/waypoints/lib/jquery.waypoints.min.js"></script>
-    <script src="../static/vendor/jarallax/dist/jarallax.min.js"></script>
-    <script src="../static/vendor/jquery.counterup/jquery.counterup.min.js"></script>
-    <script src="../static/vendor/jquery-countdown/dist/jquery.countdown.min.js"></script>
-    <script src="../static/vendor/smooth-scroll/dist/smooth-scroll.polyfills.min.js"></script>
-    <script src="../static/vendor/prismjs/prism.js"></script>
+    <script src="../../static/vendor/onscreen/dist/on-screen.umd.min.js"></script>
+    <script src="../../static/vendor/nouislider/distribute/nouislider.min.js"></script>
+    <script src="../../static/vendor/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js"></script>
+    <script src="../../static/vendor/waypoints/lib/jquery.waypoints.min.js"></script>
+    <script src="../../static/vendor/jarallax/dist/jarallax.min.js"></script>
+    <script src="../../static/vendor/jquery.counterup/jquery.counterup.min.js"></script>
+    <script src="../../static/vendor/jquery-countdown/dist/jquery.countdown.min.js"></script>
+    <script src="../../static/vendor/smooth-scroll/dist/smooth-scroll.polyfills.min.js"></script>
+    <script src="../../static/vendor/prismjs/prism.js"></script>
 
     <script async defer src="https://buttons.github.io/buttons.js"></script>
 
     <!-- Neumorphism JS -->
-    <script src="../static/assets/js/neumorphism.js"></script>
+    <script src="../../static/assets/js/neumorphism.js"></script>
 </body>
 
 

@@ -143,6 +143,23 @@
             </div>
         </nav>
     </header>
+
+    <!--ALERT-->
+    {% if messages %}
+    {% for message in messages %}
+    <div class="alert alert-info alert-dismissible shadow-soft fade show" 
+        role="alert">
+        <span class="alert-inner--text">
+            <strong>{{message}}</strong>
+        </span>
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+    {%  endfor %}
+    {% endif %}
+    <!--END OF ALERT-->
+
     <main>
         <!-- Hero -->
         <div class="section section-header pb-7">
@@ -175,8 +192,17 @@
                                                 alt="Neil Avatar">
                                         </div>
                                         <div class="card-body">
-                                            <h3 class="h5 mb-2">Instructor</h3>
-
+                                            <h3 class="h5 mb-2"><b>Instructors on our Platform</b></h3>
+                                            <!--button-->
+                                            <a href="/instructors" class="btn btn-primary"><i 
+                                                class=" fas fa-user-circle mr-2"></i><b>View Instructors</b></a><br>
+                                                <button class="navbar-toggler ml-2" type="button" data-toggle="collapse"
+                                                    data-target="#navbar_global" aria-controls="navbar_global" aria-expanded="false"
+                                                    aria-label="Toggle navigation">
+                                                    <span class="navbar-toggler-icon"></span>
+                                                </button>
+                                            </a>
+                                            <!--end of button-->
                                         </div>
                                     </div>
                                     <!-- End of Profile Card -->
@@ -191,7 +217,17 @@
                                             alt="Bonnie Avatar">
                                     </div>
                                     <div class="card-body">
-                                        <h3 class="h5 mb-2">Sample Certificate</h3>
+                                        <h3 class="h5 mb-2"><b>Sample Certificate</b></h3>
+                                        <!--button-->
+                                        <a href="/sampleCertificate" class="btn btn-primary"><i 
+                                            class=" far fa-file-alt"></i><b> View Sample Certificate</b></a><br>
+                                            <button class="navbar-toggler ml-2" type="button" data-toggle="collapse"
+                                                data-target="#navbar_global" aria-controls="navbar_global" aria-expanded="false"
+                                                aria-label="Toggle navigation">
+                                                <span class="navbar-toggler-icon"></span>
+                                            </button>
+                                        </a>
+                                        <!--end of button-->
                                     </div>
                                 </div>
                                 <!-- End of Profile Card -->
@@ -206,7 +242,17 @@
                                             alt="Christopher avatar">
                                     </div>
                                     <div class="card-body">
-                                        <h3 class="h5 mb-2">Courses</h3>
+                                        <h3 class="h5 mb-2"><b>Courses</b></h3>
+                                        <!--button-->
+                                        <a href="/courses" class="btn btn-primary"><i 
+                                            class=" fas fa-book-open"></i><b> View Courses</b></a><br>
+                                            <button class="navbar-toggler ml-2" type="button" data-toggle="collapse"
+                                                data-target="#navbar_global" aria-controls="navbar_global" aria-expanded="false"
+                                                aria-label="Toggle navigation">
+                                                <span class="navbar-toggler-icon"></span>
+                                            </button>
+                                        </a>
+                                        <!--end of button-->
                                     </div>
                                 </div>
                                 <!-- End of Profile Card -->

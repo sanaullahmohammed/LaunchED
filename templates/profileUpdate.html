@@ -107,6 +107,20 @@
     </header>
     <!-- END OF HEADER -->
 
+    <!--ALERT-->
+    {% if messages %}
+    {% for message in messages %}
+    <div class="alert alert-info alert-dismissible shadow-soft fade show" role="alert">
+        <span class="alert-inner--icon"><span class="far fa-bell"></span></span>
+        <span class="alert-inner--text"><strong>{{message}}</strong></span>
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+    {%  endfor %}
+    {% endif %}
+    <!--END OF ALERT-->
+
     <main>
         <!-- Hero -->
         <div class="section section-header pb-7">
@@ -202,6 +216,19 @@
                                     <!-- End of Form -->
                                     {% else %}
                                     <!-- Form -->
+
+                                    <div class="form-group">
+                                        <label for="exampleInputIcon4">About You</label>
+                                        <div class="input-group mb-4">
+                                            <div class="input-group-prepend">
+                                                <span class="input-group-text"><span
+                                                        class="far fa-file-alt"></span></span>
+                                            </div>
+                                            <textarea type="text" class="form-control" placeholder="Description" 
+                                                name="About" id="exampleFormControlTextarea1" rows="3"></textarea>
+                                        </div>
+                                    </div>
+                                      <!--End of FOrm-->
                                     <div class="form-group">
                                         <label for="inlineFormCustomSelectPref">Qualification</label>
                                         <div class="input-group">

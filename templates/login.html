@@ -130,24 +130,18 @@
 
     <!--ALERT-->
     {% if messages %}
-{% for message in messages %}
-  <<div class="alert alert-info alert-dismissible shadow-soft fade show" 
-  role="alert">
-  <span class="alert inner--icon">
-      <span class="far fa-bell">
-          ::before
-      </span>
-  </span>
-  <span class="alert-inner--text">
-      <strong>{{message}}</strong>
-      "This alert needs your attention."
-  </span>
-  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-      <span aria-hidden="true">x</span>
-  </button>
-</div>
-{%  endfor %}
-{% endif %}
+    {% for message in messages %}
+    <div class="alert alert-info alert-dismissible shadow-soft fade show" 
+        role="alert">
+        <span class="alert-inner--text">
+            <strong>{{message}}</strong>
+        </span>
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+    {%  endfor %}
+    {% endif %}
     <!--END OF ALERT-->
 
     <!-- Core -->
