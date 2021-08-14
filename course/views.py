@@ -219,7 +219,7 @@ def enroll(request, course_id):
         return redirect('/profile')
 
 def sampleCertificate(request):
-    return HttpResponse("Sample Certificate")
+    return render(request, 'sampleCertificate.html')
 
 def termsOfUse(request):
     return HttpResponse("Terms of Use")
