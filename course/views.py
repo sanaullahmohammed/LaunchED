@@ -1,13 +1,16 @@
-from django.http.response import HttpResponse
 from django.http import request
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from django.contrib import messages
 from django.contrib.auth import get_user_model
+from django.contrib.auth.decorators import login_required
 from django.contrib.auth.models import auth
-from .models import *
-from django.shortcuts import redirect
+from .models import Course, Instructor, Certifier, Student, StudentCourse, User
 
 USER = get_user_model()
+
+def dateConvert(date):
+    toConvert = date.split('/')
+    return( toConvert[2]+'-'+toConvert[0]+'-'+toConvert[1])
 
 # Create your views here.
 def home(request):
@@ -45,6 +48,7 @@ def login(request):
     else:
         return render(request, 'login.html')
 
+@login_required
 def logout(request):
     auth.logout(request)
     messages.success(request,"You have successfully logged off!")
@@ -61,6 +65,7 @@ def registerStudent(request):
         qual = request.POST.get('qualification')
         sex = request.POST.get('sex')
         if password1 == password2:
+            DOB = dateConvert(DOB)
             user_form = USER.objects.create_user(username=username,password=password1,email=username,first_name=f_name,last_name=l_name)
             form = Student.objects.create(fname=f_name,lname=l_name,email=username,qualification=qual,sex=sex,DOB=DOB)
             user_form.save()
@@ -84,6 +89,7 @@ def registerInstructor(request):
         qual = request.POST.get('qualification')
         sex = request.POST.get('sex')
         if password1 == password2:
+            DOB = dateConvert(DOB)
             user_form = USER.objects.create_user(username=username,password=password1,email=username,first_name=f_name,last_name=l_name)
             form = Instructor.objects.create(fname=f_name,lname=l_name,email=username,qualification=qual,sex=sex,DOB=DOB)
             user_form.save()
@@ -96,7 +102,7 @@ def registerInstructor(request):
     else:
         return render(request, 'registerInstructor.html')
 
-
+@login_required
 def profile(request):
     if request.user.is_student():
         student = Student.objects.get(email = request.user.username)
@@ -117,11 +123,13 @@ def profile(request):
         }
         return render(request,"profile.html", context)
 
+@login_required
 def deleteStudentCourse(request, course_id):
     course = StudentCourse.objects.get(pk=course_id)
     course.delete()
     return redirect('/profile')
 
+@login_required
 def profileDelete(request):
     if request.user.is_student():
         student=Student.objects.get(email = request.user.username)
@@ -136,6 +144,7 @@ def profileDelete(request):
     messages.success(request,"Account successfully deleted, We're really sorry to see you leave us :'(  ")
     return redirect('/')
 
+@login_required
 def profileUpdate(request):
     if request.method == "POST":
         if request.user.is_student():
@@ -152,6 +161,7 @@ def profileUpdate(request):
             messages.success(request,"DOB field cannot be empty!")
             return redirect('profileUpdate')
         else:
+            DOB = dateConvert(DOB)
             form = curr_user.update(fname=f_name,lname=l_name,qualification=qual,DOB=DOB)
             if request.user.is_instructor():
                 curr_user.update(description = About)
@@ -162,6 +172,7 @@ def profileUpdate(request):
     else:
         return render(request,'profileUpdate.html')
 
+@login_required
 def createCourse(request):
     certifier = Certifier.objects.all()
     instructor = Instructor.objects.get(email = request.user.username)
@@ -187,11 +198,13 @@ def createCourse(request):
 
     return render(request,"createCourse.html",context)
 
+@login_required
 def deleteInstructorCourse(request, course_id):
     course = Course.objects.get(pk=course_id)
     course.delete()
     return redirect('/profile')
 
+@login_required
 def myCourse(request):
     student = Student.objects.get(email = request.user.username)
     courses = Course.objects.all()
@@ -207,6 +220,7 @@ def myCourse(request):
         s_name= Student.objects.get(email=request.user.username)
     return render(request,"myCourses.html",context)
 
+@login_required
 def enroll(request, course_id):
     course_id = Course.objects.get(id=course_id)
     student_id = Student.objects.get(email = request.user.username)
@@ -219,13 +233,13 @@ def enroll(request, course_id):
         return redirect('/profile')
 
 def sampleCertificate(request):
-    return render(request, 'sampleCertificate.html')
+    return render(request, "sampleCertificate.html")
 
 def termsOfUse(request):
-    return HttpResponse("Terms of Use")
+    return render(request, "termsOfUse.html")
 
 def contactUs(request):
-    return HttpResponse("Contact Us")
+    return render(request, "contactUs.html")
 
 
 
