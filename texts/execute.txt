@@ -1,0 +1,5 @@
+python manage.py runserver
+
+In settings.py:
+ALLOWED HOSTS = ['<system ip address>', 'localhost', '127.0.0.1']
+python manage.py runserver 0.0.0.0:8000
