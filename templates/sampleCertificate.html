@@ -1,0 +1,178 @@
+<!--
+
+=========================================================
+* Neumorphism UI - v1.0.0
+=========================================================
+
+* Product Page: https://themesberg.com/product/ui-kits/neumorphism-ui
+* Copyright 2020 Themesberg MIT LICENSE (https://www.themesberg.com/licensing#mit)
+
+* Coded by https://themesberg.com
+
+=========================================================
+
+* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+-->
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>LaunchED - Sample Certificate</title>
+
+    <!--Favicon-->
+    <link rel="apple-touch-icon" sizes="120x120" href="../static/images/white-favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../static/images/white-favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../static/images/white-favicon/favicon-16x16.png">
+    <link rel="manifest" href="../static/images/white-favicon/site.webmanifest">
+
+    <!-- Fontawesome -->
+    <link type="text/css" href="../static/vendor/@fortawesome/fontawesome-free/css/all.min.css" rel="stylesheet">
+
+    <!-- Pixel CSS -->
+    <link type="text/css" href="../static/css/neumorphism.css" rel="stylesheet">
+
+</head>
+
+<body>
+    <header class="header-global">
+        <nav id="navbar-main" aria-label="Primary navigation"
+            class="navbar navbar-main navbar-expand-lg navbar-theme-primary headroom navbar-light">
+            <div class="container position-relative">
+                <a href="/" class="btn btn-primary" style="color:black; font-weight:bold"></i> LaunchED</a>
+                <div class="d-flex align-items-center">
+
+
+                    <div class="Authentication">
+                        {% if user.is_authenticated %}
+                            {% if user.is_student %}
+                                <a href="../profile" class="btn btn-primary text-secondary mr-3"><i
+                                        class="fas fa-user"></i> {{user.first_name}} Profile</a>
+                                <a href="../logout" class="btn btn-primary text-secondary mr-3"><i
+                                        class="fas fa-sign-out-alt"></i> Sign out</a>
+                            {% elif user.is_instructor %}
+                                <a href="../profile" class="btn btn-primary text-secondary mr-3"><i
+                                    class=" fas fa-user-tie"></i> {{user.first_name}} Profile</a>
+                                <a href="../logout" class="btn btn-primary text-secondary mr-3"><i
+                                        class="fas fa-sign-out-alt"></i> Sign out</a>
+                            {% else %}
+                                <a href="../login" class="btn btn-primary text-secondary mr-3"><i class="fas fa-sign-in-alt"></i>
+                                    Sign in</a>
+                                <a href="../registerStudent" class="btn btn-primary text-secondary mr-3"><i
+                                        class="fas fa-user"></i> Student Sign up</a>
+                                <a href="../registerInstructor" class="btn btn-primary text-secondary mr-3"><i
+                                        class="fas fa-user-tie"></i> Instructor Sign up</a>
+                            {% endif %}
+                        {% else %}
+                            <a href="../login" class="btn btn-primary text-secondary mr-3"><i class="fas fa-sign-in-alt"></i>
+                                Sign in</a>
+                            <a href="../registerStudent" class="btn btn-primary text-secondary mr-3"><i
+                                    class="fas fa-user"></i> Student Sign up</a>
+                            <a href="../registerInstructor" class="btn btn-primary text-secondary mr-3"><i
+                                    class="fas fa-user-tie"></i> Instructor Sign up</a>
+                        {% endif %}
+                    </div>
+
+                
+                </div>
+            </div>
+        </nav>
+    </header>
+
+
+    <main>
+        <!-- Hero -->
+        <div class="section section-header pb-7">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-12 col-lg-8 text-center">
+                        <h1 class="display-3 mb-4"><strong>Sample Certificate</strong> </h1>
+                    </div>
+                </div>
+            </div>
+            <!-- End of Hero section -->
+            <section class="section section-lg pt-0">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12">
+                            <!-- Profile Card -->
+                            <div class="card bg-primary shadow-soft border-light text-center py-4 mb-5">
+                                <div
+                                    class="card-header p-3">
+                                    <img src="../static/images/sampleCertificate.jpg"
+                                        class="card-img-top rounded"
+                                        alt="Sample Certificate">
+                                </div>
+                                <div class="card-body">
+                                    <h3 class="h5 mb-2">Sample Certificate</h3>
+                                    <h3 class="h5 mb-2">
+                                        <p><b>Student:</b> Your Name &emsp;&emsp; <b>Course:</b> Course Name &emsp;&emsp; <b>School:</b> LaunchED</p><br>
+                                        <p><b>Issued:</b> dd-mm-yyyy &emsp;&emsp; <b>Expires:</b> No Expiry Date</p>
+                                    </h3>
+                                </div>
+                            </div>
+                            <!-- End of Profile Card -->
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="d-flex pb-5 pt-6 pt-md-7 border-top border-light bg-primary">
+        <div class="container">
+            <div class="col-md-12">
+                <div class="nav-wrapper position-relative">
+                    <ul class="nav nav-pills nav-fill flex-column flex-md-row">
+                        <li class="nav-item"><a class="nav-link mb-sm-3 mb-md-0" href="/">
+                            <span class="icon-success">
+                                <span class="fas fa-tachometer-alt mr-2"></span>About Us</span></a>
+                        </li>
+                        <li class="nav-item"><a class="nav-link mb-sm-3 mb-md-0" href="../contactUs">
+                            <span class="icon-success">
+                                <span class="fas fa-headphones"></span> Contact Us</span></a>
+                        </li>
+                        <li class="nav-item"><a class="nav-link mb-sm-3 mb-md-0" href="../termsOfUse">
+                            <span class="icon-success">
+                                <span class="fas fa-book-open"></span> Terms And Conditions</span></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <hr class="my-5">
+            <div class="row">
+                <div class="col">
+                    <div class="d-flex text-center justify-content-center align-items-center" role="contentinfo">
+                        <p class="font-weight-normal font-small mb-0">made with ♥ by Mohammed Sanaullah and Tanmayi D.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- END OF FOOTER -->
+
+    <!-- Core -->
+    <script src="../static/vendor/jquery/dist/jquery.min.js"></script>
+    <script src="../static/vendor/popper.js/dist/umd/popper.min.js"></script>
+    <script src="../static/vendor/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="../static/vendor/headroom.js/dist/headroom.min.js"></script>
+
+    <!-- Vendor JS -->
+    <script src="../static/vendor/onscreen/dist/on-screen.umd.min.js"></script>
+    <script src="../static/vendor/nouislider/distribute/nouislider.min.js"></script>
+    <script src="../static/vendor/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js"></script>
+    <script src="../static/vendor/waypoints/lib/jquery.waypoints.min.js"></script>
+    <script src="../static/vendor/jarallax/dist/jarallax.min.js"></script>
+    <script src="../static/vendor/jquery.counterup/jquery.counterup.min.js"></script>
+    <script src="../static/vendor/jquery-countdown/dist/jquery.countdown.min.js"></script>
+    <script src="../static/vendor/smooth-scroll/dist/smooth-scroll.polyfills.min.js"></script>
+    <script src="../static/vendor/prismjs/prism.js"></script>
+
+    <!-- Neumorphism JS -->
+    <script src="../static/assets/js/neumorphism.js"></script>
+</body>
+
+</html>

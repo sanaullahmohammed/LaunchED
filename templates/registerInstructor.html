@@ -23,70 +23,22 @@
 </style>
 
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <!-- Primary Meta Tags -->
     <title>LaunchED - Sign up</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="title" content="Neumorphism UI - Sign up">
-    <meta name="author" content="Themesberg">
 
-    <link rel="canonical" href="https://themesberg.com/product/ui-kits/neumorphism-ui/" />
-
-    <!--  Social tags -->
-    <meta name="keywords"
-        content="neumorphism, neumorphism ui, neomorphism, neomorphism ui, neomorphism css, neumorphism css, neumorph, neumorphic, design system, login, form, table, tables, card, cards, navbar, modal, icons, icons, map, chat, carousel, menu, datepicker, gallery, slider, date, social, dropdown, search, tab, nav, footer, date picker, forms, tabs, time, button, select, input, timeline, cart, about us, account, log in, blog, profile, portfolio, landing page, ecommerce, shop, landing, register, app, contact, one page, sign up, signup, store, bootstrap 4, bootstrap4, dashboard, bootstrap 4 dashboard, bootstrap 4 design, bootstrap 4 system, bootstrap 4, bootstrap 4 uit kit, bootstrap 4 kit, themesberg, html kit, html css template, web template, bootstrap, bootstrap 4, css3 template, frontend, responsive bootstrap template, bootstrap ui kit, responsive ui kit">
-    <meta name="description"
-        content="Start developing neumorphic web applications and pages using Neumorphism UI. It features over 100 individual components and 5 example pages.">
-
-    <!-- Schema.org markup for Google+ -->
-    <meta itemprop="name" content="Neumorphism UI by Themesberg">
-    <meta itemprop="description"
-        content="Start developing neumorphic web applications and pages using Neumorphism UI. It features over 100 individual components and 5 example pages.">
-    <meta itemprop="image"
-        content="https://themesberg.s3.us-east-2.amazonaws.com/public/products/neumorphism-ui/neumorphism-thumbnail.jpg">
-
-    <!-- Twitter Card data -->
-    <meta name="twitter:card" content="product">
-    <meta name="twitter:site" content="@themesberg">
-    <meta name="twitter:title" content="Neumorphism UI by Themesberg">
-    <meta name="twitter:description"
-        content="Start developing neumorphic web applications and pages using Neumorphism UI. It features over 100 individual components and 5 example pages.">
-    <meta name="twitter:creator" content="@themesberg">
-    <meta name="twitter:image"
-        content="https://themesberg.s3.us-east-2.amazonaws.com/public/products/neumorphism-ui/neumorphism-thumbnail.jpg">
-
-    <!-- Open Graph data -->
-    <meta property="fb:app_id" content="214738555737136">
-    <meta property="og:title" content="Neumorphism UI by Themesberg" />
-    <meta property="og:type" content="article" />
-    <meta property="og:url" content="https://demo.themesberg.com/neumorphism-ui/" />
-    <meta property="og:image"
-        content="https://themesberg.s3.us-east-2.amazonaws.com/public/products/neumorphism-ui/neumorphism-thumbnail.jpg" />
-    <meta property="og:description"
-        content="Start developing neumorphic web applications and pages using Neumorphism UI. It features over 100 individual components and 5 example pages." />
-    <meta property="og:site_name" content="Themesberg" />
-
-    <!-- Favicon -->
-    <link rel="apple-touch-icon" sizes="120x120" href="../../assets/img/favicon/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="../../assets/img/favicon/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="../../assets/img/favicon/favicon-16x16.png">
-    <link rel="manifest" href="../../assets/img/favicon/site.webmanifest">
-    <link rel="mask-icon" href="../../assets/img/favicon/safari-pinned-tab.svg" color="#ffffff">
-    <meta name="msapplication-TileColor" content="#ffffff">
-    <meta name="theme-color" content="#ffffff">
+    <!--Favicon-->
+    <link rel="apple-touch-icon" sizes="120x120" href="../static/images/white-favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../static/images/white-favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../static/images/white-favicon/favicon-16x16.png">
+    <link rel="manifest" href="../static/images/white-favicon/site.webmanifest">
 
     <!-- Fontawesome -->
     <link type="text/css" href="../static/vendor/@fortawesome/fontawesome-free/css/all.min.css" rel="stylesheet">
 
     <!-- Pixel CSS -->
     <link type="text/css" href="../static/css/neumorphism.css" rel="stylesheet">
-
-    <!-- NOTICE: You can use the _analytics.html partial to include production code specific code & trackers -->
-
 </head>
 
 <body>
-
     <!-- HEADER -->
     <header class="header-global">
         <nav id="navbar-main" aria-label="Primary navigation"
@@ -94,64 +46,59 @@
             <div class="container position-relative">
                 <a href="/" class="btn btn-primary" style="color:black; font-weight:bold"></i> LaunchED</a>
                 <div class="d-flex align-items-center">
-
                     <div class="Authentication">
                         {% if user.is_authenticated %}
                             {% if user.is_student %}
                                 <a href="../profile" class="btn btn-primary text-secondary mr-3"><i
-                                        class="fas fa-user-astronaut"></i> {{user.first_name}} Profile</a>
+                                        class="fas fa-user"></i> {{user.first_name}} Profile</a>
                                 <a href="../logout" class="btn btn-primary text-secondary mr-3"><i
-                                        class="far fa-paper-plane mr-2"></i> Sign out</a>
-                                <button class="navbar-toggler ml-2" type="button" data-toggle="collapse"
-                                    data-target="#navbar_global" aria-controls="navbar_global" aria-expanded="false"
-                                    aria-label="Toggle navigation">
-                                    <span class="navbar-toggler-icon"></span>
-                                </button>
+                                        class="fas fa-sign-out-alt"></i> Sign out</a>
                             {% elif user.is_instructor %}
                                 <a href="../profile" class="btn btn-primary text-secondary mr-3"><i
-                                    class="fas fa-user-astronaut"></i> {{user.first_name}} Profile</a>
+                                    class="fas fa-user-tie"></i> {{user.first_name}} Profile</a>
                                 <a href="../logout" class="btn btn-primary text-secondary mr-3"><i
-                                        class="far fa-paper-plane mr-2"></i> Sign out</a>
-                                <button class="navbar-toggler ml-2" type="button" data-toggle="collapse"
-                                    data-target="#navbar_global" aria-controls="navbar_global" aria-expanded="false"
-                                    aria-label="Toggle navigation">
-                                    <span class="navbar-toggler-icon"></span>
-                                </button>
+                                        class="fas fa-sign-out-alt"></i> Sign out</a>
                             {% else %}
-                                <a href="../login" class="btn btn-primary text-secondary mr-3"><i class="far fa-user"></i>
+                                <a href="../login" class="btn btn-primary text-secondary mr-3"><i class="fas fa-sign-in-alt"></i>
                                     Sign in</a>
                                 <a href="../registerStudent" class="btn btn-primary text-secondary mr-3"><i
-                                        class="fas fa-user-astronaut"></i> Student Sign up</a>
+                                        class="fas fa-user"></i> Student Sign up</a>
                                 <a href="../registerInstructor" class="btn btn-primary text-secondary mr-3"><i
-                                        class="far fa-paper-plane mr-2"></i> Instructor Sign up</a>
-                                <button class="navbar-toggler ml-2" type="button" data-toggle="collapse"
-                                    data-target="#navbar_global" aria-controls="navbar_global" aria-expanded="false"
-                                    aria-label="Toggle navigation">
-                                    <span class="navbar-toggler-icon"></span>
+                                        class="fas fa-user-tie"></i> Instructor Sign up</a>
                             {% endif %}
                         {% else %}
-                            <a href="../login" class="btn btn-primary text-secondary mr-3"><i class="far fa-user"></i>
+                            <a href="../login" class="btn btn-primary text-secondary mr-3"><i class="fas fa-sign-in-alt"></i>
                                 Sign in</a>
                             <a href="../registerStudent" class="btn btn-primary text-secondary mr-3"><i
-                                    class="fas fa-user-astronaut"></i> Student Sign up</a>
+                                    class="fas fa-user"></i> Student Sign up</a>
                             <a href="../registerInstructor" class="btn btn-primary text-secondary mr-3"><i
-                                    class="far fa-paper-plane mr-2"></i> Instructor Sign up</a>
-                            <button class="navbar-toggler ml-2" type="button" data-toggle="collapse"
-                                data-target="#navbar_global" aria-controls="navbar_global" aria-expanded="false"
-                                aria-label="Toggle navigation">
-                                <span class="navbar-toggler-icon"></span>
+                                    class="fas fa-user-tie"></i> Instructor Sign up</a>
                         {% endif %}
                     </div>
-
                 </div>
             </div>
         </nav>
     </header>
     <!-- END OF HEADER -->
-
     <main>
         <!-- Form Section -->
         <section class="min-vh-100 d-flex bg-primary align-items-center">
+
+            <!--ALERT-->
+            {% if messages %}
+                {% for message in messages %}
+                    <div class="alert alert-info alert-dismissible shadow-soft fade show" 
+                        role="alert">
+                        <span class="alert-inner--text">
+                            <strong>{{message}}</strong>
+                        </span>
+                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                {%  endfor %}
+            {% endif %}
+            <!--END OF ALERT-->
             <div class="container">
                 <div class="row justify-content-center">
                     <div class="col-12 col-md-8 col-lg-6 justify-content-center">
@@ -160,6 +107,7 @@
                                 <h2 class="mb-0 h5">Create Instructor Account</h2>
                             </div>
                             <div class="card-body">
+                                <h1 class="display-4 mb-4"><i class="fas fa-user-tie"></i> Create Instructor Account</h1>
                                 <form method="POST">
                                     {% csrf_token %}
                                     <!-- Form -->
@@ -223,8 +171,7 @@
                                                         class="fas fa-unlock-alt"></span></span>
                                             </div>
                                             <input class="form-control" name="password2"
-                                                placeholder="Confirm password" type="password" aria-label="Password"
-                                                required>
+                                                placeholder="Confirm password" type="password" aria-label="Password" required>
                                         </div>
                                     </div>
                                     <!-- End of Form -->
@@ -236,8 +183,8 @@
                                                 <span class="input-group-text"><span
                                                         class="fas fa-calendar-alt"></span></span>
                                             </div>
-                                            <input  name="DOB"
-                                                placeholder="Select date" type="date" aria-label="Date with icon left">
+                                            <input class="form-control datepicker" name="DOB"
+                                                placeholder="Select date" type="text" aria-label="Date with icon left">
                                         </div>
                                     </div>
                                     <!-- End of Form -->
@@ -283,7 +230,7 @@
                                         </label>
                                     </div>
                             </div>
-                            <button type="submit" class="btn btn-block btn-primary">Sign in</button>
+                            <button type="submit" class="btn btn-block btn-primary"><i class="fas fa-user-plus"></i> Sign up</button>
                             </form>
                             <div class="d-block d-sm-flex justify-content-center align-items-center mt-4">
                                 <span class="font-weight-normal">
@@ -295,7 +242,6 @@
                     </div>
                 </div>
             </div>
-            </div>
         </section>
         <!--End of Form Section-->
     </main>
@@ -303,32 +249,29 @@
     <!-- FOOTER -->
     <footer class="d-flex pb-5 pt-6 pt-md-7 border-top border-light bg-primary">
         <div class="container">
-            <div class="row">
-                <div class="col-md-10 col-lg-8">
-                    <div class="nav-wrapper position-relative mb-4">
-                        <ul class="nav nav-pills nav-fill flex-column flex-md-row" id="tabs-icon-text" role="tablist">
-                            <li class="nav-item">
-                                <a href="/" class="btn btn-primary"><i class="fas fa-tachometer-alt mr-2"></i>
-                                    About Us</a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="../contactUs" class="btn btn-primary"><i class="fas fa-headphones"></i>
-                                    Contact Us</a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="../termsOfUse" class="btn btn-primary"><i class="fas fa-book-open"></i>
-                                    Terms and Conditions</a>
-                            </li>
-                        </ul>
-                    </div>
+            <div class="col-md-12">
+                <div class="nav-wrapper position-relative">
+                    <ul class="nav nav-pills nav-fill flex-column flex-md-row">
+                        <li class="nav-item"><a class="nav-link mb-sm-3 mb-md-0" href="/">
+                            <span class="icon-success">
+                                <span class="fas fa-tachometer-alt mr-2"></span>About Us</span></a>
+                        </li>
+                        <li class="nav-item"><a class="nav-link mb-sm-3 mb-md-0" href="../contactUs">
+                            <span class="icon-success">
+                                <span class="fas fa-headphones"></span> Contact Us</span></a>
+                        </li>
+                        <li class="nav-item"><a class="nav-link mb-sm-3 mb-md-0" href="../termsOfUse">
+                            <span class="icon-success">
+                                <span class="fas fa-book-open"></span> Terms And Conditions</span></a>
+                        </li>
+                    </ul>
                 </div>
             </div>
             <hr class="my-5">
             <div class="row">
                 <div class="col">
                     <div class="d-flex text-center justify-content-center align-items-center" role="contentinfo">
-                        <p class="font-weight-normal font-small mb-0">made with ♥ by Mohammed Sanaullah and Tanmayi
-                            D.
+                        <p class="font-weight-normal font-small mb-0">made with ♥ by Mohammed Sanaullah and Tanmayi D.
                         </p>
                     </div>
                 </div>
@@ -353,8 +296,6 @@
     <script src="../static/vendor/jquery-countdown/dist/jquery.countdown.min.js"></script>
     <script src="../static/vendor/smooth-scroll/dist/smooth-scroll.polyfills.min.js"></script>
     <script src="../static/vendor/prismjs/prism.js"></script>
-
-    <script async defer src="https://buttons.github.io/buttons.js"></script>
 
     <!-- Neumorphism JS -->
     <script src="../static/assets/js/neumorphism.js"></script>
