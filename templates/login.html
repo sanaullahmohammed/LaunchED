@@ -20,46 +20,47 @@
 <html lang="en">
 
 <head>
-<title>LaunchED - Sign in</title>
+    <title>LaunchED - Sign in</title>
 
-<!-- Fontawesome -->
-<link type="text/css" href="../static\vendor\@fortawesome\fontawesome-free\css\all.min.css" rel="stylesheet">
+    <!-- Fontawesome -->
+    <link type="text/css" href="../static\vendor\@fortawesome\fontawesome-free\css\all.min.css" rel="stylesheet">
 
-<!--Favicon-->
-<link rel="apple-touch-icon" sizes="120x120" href="../static/images/white-favicon/apple-touch-icon.png">
-<link rel="icon" type="image/png" sizes="32x32" href="../static/images/white-favicon/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="../static/images/white-favicon/favicon-16x16.png">
-<link rel="manifest" href="../static/images/white-favicon/site.webmanifest">
+    <!--Favicon-->
+    <link rel="apple-touch-icon" sizes="120x120" href="../static/images/white-favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../static/images/white-favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../static/images/white-favicon/favicon-16x16.png">
+    <link rel="manifest" href="../static/images/white-favicon/site.webmanifest">
 
-<!-- Pixel CSS -->
-<link type="text/css" href="../static/css/neumorphism.css" rel="stylesheet">
+    <!-- Pixel CSS -->
+    <link type="text/css" href="../static/css/neumorphism.css" rel="stylesheet">
 
 </head>
+
 <body>
     <main>
+        <!--ALERT-->
+        {% if messages %}
+        {% for message in messages %}
+        <div class="alert alert-info alert-dismissible shadow-soft fade show" role="alert">
+            <span class="alert-inner--text">
+                <strong>{{message}}</strong>
+            </span>
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+        {% endfor %}
+        {% endif %}
+        <!--END OF ALERT-->
         <!-- Section -->
         <section class="min-vh-100 d-flex bg-primary align-items-center">
-            <!--ALERT-->
-            {% if messages %}
-                {% for message in messages %}
-                    <div class="alert alert-info alert-dismissible shadow-soft fade show" 
-                        role="alert">
-                        <span class="alert-inner--text">
-                            <strong>{{message}}</strong>
-                        </span>
-                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                        </button>
-                    </div>
-                {%  endfor %}
-            {% endif %}
-            <!--END OF ALERT-->
+
             <div class="container">
                 <div class="row justify-content-center">
                     <div class="col-12 col-md-8 col-lg-6 justify-content-center">
                         <div class="card bg-primary shadow-soft border-light p-4">
                             <div class="card-header text-center pb-0">
-                                <h2 class="h4">Sign in to our platform</h2>  
+                                <h2 class="h4">Sign in to our platform</h2>
                             </div>
                             <div class="card-body">
                                 <form method="POST" class="mt-4">
@@ -69,9 +70,11 @@
                                         <label for="exampleInputIcon3">Your email</label>
                                         <div class="input-group mb-4">
                                             <div class="input-group-prepend">
-                                                <span class="input-group-text"><span class="fas fa-envelope"></span></span>
+                                                <span class="input-group-text"><span
+                                                        class="fas fa-envelope"></span></span>
                                             </div>
-                                            <input class="form-control" name="username" placeholder="example@company.com" type="text" aria-label="email adress">
+                                            <input class="form-control" name="username"
+                                                placeholder="example@company.com" type="text" aria-label="email adress">
                                         </div>
                                     </div>
                                     <!-- End of Form -->
@@ -81,14 +84,17 @@
                                             <label for="exampleInputPassword6">Password</label>
                                             <div class="input-group mb-4">
                                                 <div class="input-group-prepend">
-                                                    <span class="input-group-text"><span class="fas fa-unlock-alt"></span></span>
+                                                    <span class="input-group-text"><span
+                                                            class="fas fa-unlock-alt"></span></span>
                                                 </div>
-                                                <input class="form-control" name="password" placeholder="Password" type="password" aria-label="Password" required>
+                                                <input class="form-control" name="password" placeholder="Password"
+                                                    type="password" aria-label="Password" required>
                                             </div>
                                         </div>
                                         <!-- End of Form -->
                                     </div>
-                                    <button type="submit" class="btn btn-block btn-primary"><i class="fas fa-sign-in-alt"></i> Sign in</button>
+                                    <button type="submit" class="btn btn-block btn-primary"><i
+                                            class="fas fa-sign-in-alt"></i> Sign in</button>
                                 </form>
                                 <div class="d-block d-sm-flex justify-content-center align-items-center mt-4">
                                     <span class="font-weight-normal">
@@ -104,25 +110,25 @@
         </section>
     </main>
 
-<!-- Core -->
-<script src="../static/vendor/jquery/dist/jquery.min.js"></script>
-<script src="../static/vendor/popper.js/dist/umd/popper.min.js"></script>
-<script src="../static/vendor/bootstrap/dist/js/bootstrap.min.js"></script>
-<script src="../static/vendor/headroom.js/dist/headroom.min.js"></script>
+    <!-- Core -->
+    <script src="../static/vendor/jquery/dist/jquery.min.js"></script>
+    <script src="../static/vendor/popper.js/dist/umd/popper.min.js"></script>
+    <script src="../static/vendor/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="../static/vendor/headroom.js/dist/headroom.min.js"></script>
 
-<!-- Vendor JS -->
-<script src="../static/vendor/onscreen/dist/on-screen.umd.min.js"></script>
-<script src="../static/vendor/nouislider/distribute/nouislider.min.js"></script>
-<script src="../static/vendor/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js"></script>
-<script src="../static/vendor/waypoints/lib/jquery.waypoints.min.js"></script>
-<script src="../static/vendor/jarallax/dist/jarallax.min.js"></script>
-<script src="../static/vendor/jquery.counterup/jquery.counterup.min.js"></script>
-<script src="../static/vendor/jquery-countdown/dist/jquery.countdown.min.js"></script>
-<script src="../static/vendor/smooth-scroll/dist/smooth-scroll.polyfills.min.js"></script>
-<script src="../static/vendor/prismjs/prism.js"></script>
+    <!-- Vendor JS -->
+    <script src="../static/vendor/onscreen/dist/on-screen.umd.min.js"></script>
+    <script src="../static/vendor/nouislider/distribute/nouislider.min.js"></script>
+    <script src="../static/vendor/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js"></script>
+    <script src="../static/vendor/waypoints/lib/jquery.waypoints.min.js"></script>
+    <script src="../static/vendor/jarallax/dist/jarallax.min.js"></script>
+    <script src="../static/vendor/jquery.counterup/jquery.counterup.min.js"></script>
+    <script src="../static/vendor/jquery-countdown/dist/jquery.countdown.min.js"></script>
+    <script src="../static/vendor/smooth-scroll/dist/smooth-scroll.polyfills.min.js"></script>
+    <script src="../static/vendor/prismjs/prism.js"></script>
 
-<!-- Neumorphism JS -->
-<script src="../static/assets/js/neumorphism.js"></script>
+    <!-- Neumorphism JS -->
+    <script src="../static/assets/js/neumorphism.js"></script>
 </body>
 
 </html>
