@@ -1,0 +1,30 @@
+instructor: fas fa-user-tie
+delete profile: fas fa-trash
+sign out: fas fa-sign-out-alt
+publish: fas fa-upload
+student: fas fa-user
+update: fas fa-pen-alt
+sign in:fas fa-sign-in-alt
+all courses: fas fa-book-open
+enroll: fas fa-location-arrow
+contact: fas fa-headphones
+sign up button: <i class="fas fa-user-plus"></i>
+
+user: fas fa-user-circle mr-2
+user: far fa-user
+user: fas fa-user-astronaut
+dashboard: fas fa-tachometer-alt mr-2
+book: fas fa-book-open
+message: far fa-comments mr-2
+phone: fas fa-headphones
+group of people: fas fa-users
+Storage: far fa-hdd
+person speaking on call: fas fa-headset
+paperplane: far fa-paper-plane
+Email: far fa-envelope
+folded page: far fa-file-alt
+book reader: fas fa-book-reader mr-2
+
+warning: fas fa-exclamation-circle
+done: fas fa-thumbs-up
+heads up/bell icon: far fa-bell

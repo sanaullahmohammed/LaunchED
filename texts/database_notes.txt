@@ -1,0 +1,140 @@
+INSTRUCTORS:
+Maria Gracia - 2 - google
+George Clark - 2 - google 
+Samuel Taylor - 3 - microsoft
+Patrick Blatchford - 3 - AWS
+Billie Anderson - 3 - SAS
+James Smith - 2 - IBM
+
+STUDENTS:
+John Doe
+Alisa Brown
+June Miller
+San Tan
+Joseph Jones
+Rachel Barbara
+Lucas White
+Adhnan Manzis
+Moin Manzoor
+Adithi Mahesh
+
+GOOGLE:
+
+Courses--
+Google IT Support
+This 5-course certificate, developed by Google, includes innovative curriculum designed to prepare you for an entry-level role in IT support.
+
+Google IT Automation with Python
+This 6-course certificate, developed by Google, is designed to provide IT professionals with in-demand skills — including Python, Git, and IT automation.
+
+Cloud Architecture with Google Cloud Professional Certificate
+This program provides the skills you need as a professional cloud architect and supports your preparation for the industry-recognized Cloud Architect.
+
+Security in Google Cloud Platform Specialization 
+Participants learn mitigations for attacks at many points in a Google Cloud-based infrastructure, including Distributed Denial-of-Service attacks, phishing attacks, and many more.
+
+Instructor--
+Maria Gracia
+Senior Professor
+Female
+08.04.1965
+maria@launched.com
+password
+Maria has more than 17 years of professional experience delivering Google products for training partners. She became a Certified Technical Instructor in 1992.Now she is teaching students online through our LaunchED platform. 
+
+George Clark
+Other
+07.03.1962
+george@launched.com
+password
+Maria has more than 20 years of professional experience delivering Google products for training partners. She became a Certified Technical Instructor in 1989.Now they are teaching students online through our LaunchED platform.
+
+MICROSOFT:
+
+Courses--
+Microsoft Certified: Azure for SAP Workloads Special
+This course teaches SAP system landscape and industry standards that are specific to the initial migration or integration and the long-term operation of an SAP solution on Microsoft Azure.
+
+Microsoft Certified: Azure Fundamentals
+This certification is intended for candidates who are just beginning to work with cloud-based solutions and services or are new to Azure.
+
+Microsoft Certified: Azure Security Engineer Associate
+This course teaches security controls and threat protection, managing identity and access, and protecting data, applications, and networks in cloud and hybrid environments.
+
+Instructor--
+Samuel Taylor
+Research Assistant
+Other
+23.07.1987
+samuel@launched.com
+password
+Samuel has more than 14 years of professional experience delivering Microsoft products for training partners. They became a Certified Instructor in 2007.Now they are teaching students online through our LaunchED platform.
+
+AMAZON WEB SERVICES:
+
+Courses--
+AWS Fundamentals 
+This specialization gives current or aspiring IT professionals an overview of the features, benefits, and capabilities of Amazon Web Services (AWS). 
+
+Getting Started with AWS Machine Learning
+This course will teach you how to get started with AWS Machine Learning. Key topics include: Machine Learning on AWS, Computer Vision on AWS, and Natural Language Processing (NLP) on AWS.
+
+AWS Computer Vision: Getting Started with GluonCV
+This course provides an overview of Computer Vision (CV), Machine Learning (ML) with Amazon Web Services (AWS), and how to build and train a CV model using the Apache MXNet and GluonCV toolkit.
+
+Instructor--
+Patrick Blacthford
+Assistant Professor
+Male
+14.09.1980
+patrick@launched.com
+password
+Patrick has more than 8 years of professional experience delivering Google products for training partners. She became a Certified Technical Instructor in 2010.Now he is teaching students online through our LaunchED platform..
+
+
+SAS:
+
+Courses--
+SAS Programmer Professional Certificate
+This course teaches you skills in manipulating and transforming data, combining SAS data sets, creating basic detail and summary reports using SAS procedures and lot more.
+
+Statistic with SAS
+This introductory course is for SAS software users who perform statistical analyses using SAS/STAT software. The focus is on t tests, ANOVA, and linear regression.
+
+SAS Visual Business Analytics Professional Certificate
+Using SAS Visual Analytics, you will learn to access and manipulate data, and design and share dashboards to visualize your data.
+
+Instructor--
+Billie Anderson
+Senior Professor
+Female
+15.11.1972
+billie@launched.com
+password
+Billie worked at SAS in R&D for 7 years from 2000-2007.She currently develops programs to teach SAS courses to students and has authored books on SAS.Now she is teaching students online through our LaunchED platform.
+
+
+IBM:
+
+Courses--
+IBM AI Foundations for Business 
+This specialization will explain and describe the overall focus areas for business leaders considering AI-based solutions for business challenges. 
+
+IBM Data Science Professional Certificate
+This Professional Certificate from IBM will help anyone interested in pursuing a career in data science or machine learning develop career-relevant skills and experience.
+
+Instructor--
+James Smith
+Senior Professor
+Male
+01.01.1954
+james@launched.com
+password
+James Smith is a Technical Instructor for IBM since 1985. He has taught more than 500 classes in Canada, USA, England and the Netherlands. Now he is teaching students online through our LaunchED platform. 
+
+
+CISCO:
+
+Courses--
+
+Instructor--
