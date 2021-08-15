@@ -17,14 +17,9 @@
 {% load static %}
 <!DOCTYPE html>
 <html lang="en">
-<style>
-    .fa-bell:before {
-        content: "\f0f3";
-    }
-</style>
 
 <head>
-    <title>LaunchED - Courses</title>
+    <title>LaunchED - Contact Us</title>
 
     <!--Favicon-->
     <link rel="apple-touch-icon" sizes="120x120" href="../static/images/white-favicon/apple-touch-icon.png">
@@ -37,10 +32,10 @@
 
     <!-- Pixel CSS -->
     <link type="text/css" href="../static/css/neumorphism.css" rel="stylesheet">
+
 </head>
 
 <body>
-    <!-- HEADER -->
     <header class="header-global">
         <nav id="navbar-main" aria-label="Primary navigation"
             class="navbar navbar-main navbar-expand-lg navbar-theme-primary headroom navbar-light">
@@ -66,7 +61,7 @@
                                 <a href="../registerStudent" class="btn btn-primary text-secondary mr-3"><i
                                         class="fas fa-user"></i> Student Sign up</a>
                                 <a href="../registerInstructor" class="btn btn-primary text-secondary mr-3"><i
-                                        class="fas fa-user-tie"></i> Instructor Sign up</a>
+                                        class=" fas fa-user-tie"></i> Instructor Sign up</a>
                             {% endif %}
                         {% else %}
                             <a href="../login" class="btn btn-primary text-secondary mr-3"><i
@@ -75,37 +70,22 @@
                             <a href="../registerStudent" class="btn btn-primary text-secondary mr-3"><i
                                     class="fas fa-user"></i> Student Sign up</a>
                             <a href="../registerInstructor" class="btn btn-primary text-secondary mr-3"><i
-                                    class="fas fa-user-tie"></i> Instructor Sign up</a>
+                                    class=" fas fa-user-tie"></i> Instructor Sign up</a>
                         {% endif %}
                     </div>
                 </div>
             </div>
         </nav>
     </header>
-    <!-- END OF HEADER -->
-
 
 
     <main>
         <!-- Hero -->
         <div class="section section-header pb-7">
-            <!--ALERT-->
-            {% if messages %}
-            {% for message in messages %}
-            <div class="alert alert-danger alert-dismissible shadow-soft fade show" role="alert">
-                <span class="alert-inner--icon"><span class="fas fa-fire"></span></span>
-                <span class="alert-inner--text"><strong>{{message}}</strong></span>
-                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-            {% endfor %}
-            {% endif %}
-            <!--END OF ALERT-->
             <div class="container">
                 <div class="row justify-content-center">
                     <div class="col-12 col-lg-8 text-center">
-                        <h1 class="display-2 mb-4">Courses on our Platform</h1>
+                        <h1 class="display-3 mb-4"><strong>Contact Us</strong> </h1>
                     </div>
                 </div>
             </div>
@@ -113,44 +93,39 @@
             <section class="section section-lg pt-0">
                 <div class="container">
                     <div class="row">
-                        <div class="card-deck">
+                        <div class="col-12">
                             <!-- Profile Card -->
-                            {% for course in courses %}
-                            <div class="col-12 col-md-6 col-lg-4">
-                                <div class="card bg-primary shadow-soft border-light text-center py-4 mb-5 ">
-                                    <div
-                                        class="profile-image shadow-inset border border-light bg-primary rounded-circle p-3 mx-auto">
-                                        <img src="../static/images/course.png"
-                                            class="card-img-top shadow-soft p-2 border border-light rounded-circle"
-                                            alt="Courses Image">
-                                    </div>
-                                    <div class="card-body">
-                                        <h3 class="h5 mb-2">{{ course.name}}</h3>
-                                        <ul class="list-unstyled justify-content-center mt-3 mb-4">
-                                            <li>
-                                                <strong>Instructor:</strong> {{ course.instructor.fname}} {{ course.instructor.lname}}
-                                            </li>
-                                            <li>
-                                                <strong>Certifier:</strong> {{course.certifier.name}}
-                                            </li>
-                                            <li>
-                                                <strong>Publish Date:</strong> {{course.publish_date}}
-                                            </li>
-                                            <li>
-                                                <strong>Description:</strong> {{course.description}}
-                                            </li>
-                                        </ul>
-                                        {% if user.is_authenticated %}
-                                        {% if user.is_student %}
-                                        <a href="/courses/{{ course.id }}/"
-                                            class="btn btn-primary text-secondary mr-3"><i
-                                                class="fas fa-location-arrow"></i> Enroll</a>
-                                            {% endif %}
-                                            {% endif %}
-                                    </div>
+                            <div class="card bg-primary shadow-soft border-light text-center py-4 mb-5">
+                                <div class="card-header p-3">
+                                </div>
+                                <div class="card-body">
+                                    <h3 class="h5 mb-2"><i class="fas fa-headset"></i> Contact Us for any queries</h3>
+                                    <h3 class="h5 mb-2">
+                                        <p><b>Twitter</b><br><br></p>
+                                        <p>
+                                            Whether you're a student or not, feel free to talk with us on Twitter. We're
+                                            always happy to get-to-know new people.
+                                            Also, this is where we'll be announcing new classes first in the future, so
+                                            make sure to follow us!<br>
+                                            https://twitter.com/xxxxx<br><br>
+                                        </p>
+
+                                        <p><b>Instagram</b><br><br></p>
+                                        <p>
+                                            Feel free to DM (Direct-Message) us on Instagram anytime! We'll reply as
+                                            soon as possible.<br>
+                                            https://instagram.com/xxxxx<br><br>
+                                        </p>
+
+                                        <p><b>Email</b><br><br></p>
+                                        <p>
+                                            <b>You can expect a response within 1 business day</b><br><br>
+                                            <b>Sales & Customer Service:</b><br>
+                                            Email us at hello@xxxxx.com
+                                        </p>
+                                    </h3>
                                 </div>
                             </div>
-                            {%endfor%}
                             <!-- End of Profile Card -->
                         </div>
                     </div>
@@ -158,7 +133,8 @@
             </section>
         </div>
     </main>
-    <!-- FOOTER -->
+
+    <!--FOOTER-->
     <footer class="d-flex pb-5 pt-6 pt-md-7 border-top border-light bg-primary">
         <div class="container">
             <div class="col-md-12">

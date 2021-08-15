@@ -19,176 +19,126 @@
 <html lang="en">
 
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <!-- Primary Meta Tags -->
     <title>LaunchED - Profile</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="title" content="Neumorphism UI - About us">
-    <meta name="author" content="Themesberg">
 
-    <link rel="canonical" href="https://themesberg.com/product/ui-kits/neumorphism-ui/" />
-
-    <!--  Social tags -->
-    <meta name="keywords"
-        content="neumorphism, neumorphism ui, neomorphism, neomorphism ui, neomorphism css, neumorphism css, neumorph, neumorphic, design system, login, form, table, tables, card, cards, navbar, modal, icons, icons, map, chat, carousel, menu, datepicker, gallery, slider, date, social, dropdown, search, tab, nav, footer, date picker, forms, tabs, time, button, select, input, timeline, cart, about us, account, log in, blog, profile, portfolio, landing page, ecommerce, shop, landing, register, app, contact, one page, sign up, signup, store, bootstrap 4, bootstrap4, dashboard, bootstrap 4 dashboard, bootstrap 4 design, bootstrap 4 system, bootstrap 4, bootstrap 4 uit kit, bootstrap 4 kit, themesberg, html kit, html css template, web template, bootstrap, bootstrap 4, css3 template, frontend, responsive bootstrap template, bootstrap ui kit, responsive ui kit">
-    <meta name="description"
-        content="Start developing neumorphic web applications and pages using Neumorphism UI. It features over 100 individual components and 5 example pages.">
-
-    <!-- Schema.org markup for Google+ -->
-    <meta itemprop="name" content="Neumorphism UI by Themesberg">
-    <meta itemprop="description"
-        content="Start developing neumorphic web applications and pages using Neumorphism UI. It features over 100 individual components and 5 example pages.">
-    <meta itemprop="image"
-        content="https://themesberg.s3.us-east-2.amazonaws.com/public/products/neumorphism-ui/neumorphism-thumbnail.jpg">
-
-    <!-- Twitter Card data -->
-    <meta name="twitter:card" content="product">
-    <meta name="twitter:site" content="@themesberg">
-    <meta name="twitter:title" content="Neumorphism UI by Themesberg">
-    <meta name="twitter:description"
-        content="Start developing neumorphic web applications and pages using Neumorphism UI. It features over 100 individual components and 5 example pages.">
-    <meta name="twitter:creator" content="@themesberg">
-    <meta name="twitter:image"
-        content="https://themesberg.s3.us-east-2.amazonaws.com/public/products/neumorphism-ui/neumorphism-thumbnail.jpg">
-
-    <!-- Open Graph data -->
-    <meta property="fb:app_id" content="214738555737136">
-    <meta property="og:title" content="Neumorphism UI by Themesberg" />
-    <meta property="og:type" content="article" />
-    <meta property="og:url" content="https://demo.themesberg.com/neumorphism-ui/" />
-    <meta property="og:image"
-        content="https://themesberg.s3.us-east-2.amazonaws.com/public/products/neumorphism-ui/neumorphism-thumbnail.jpg" />
-    <meta property="og:description"
-        content="Start developing neumorphic web applications and pages using Neumorphism UI. It features over 100 individual components and 5 example pages." />
-    <meta property="og:site_name" content="Themesberg" />
-
-    <!-- Favicon -->
-    <link rel="apple-touch-icon" sizes="120x120" href="../static/assets/img/favicon/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="../static/assets/img/favicon/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="../static/assets/img/favicon/favicon-16x16.png">
-    <link rel="manifest" href="../static/assets/img/favicon/site.webmanifest">
-    <link rel="mask-icon" href="../static/assets/img/favicon/safari-pinned-tab.svg" color="#ffffff">
-    <meta name="msapplication-TileColor" content="#ffffff">
-    <meta name="theme-color" content="#ffffff">
+    <!--Favicon-->
+    <link rel="apple-touch-icon" sizes="120x120" href="../static/images/white-favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../static/images/white-favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../static/images/white-favicon/favicon-16x16.png">
+    <link rel="manifest" href="../static/images/white-favicon/site.webmanifest">
 
     <!-- Fontawesome -->
     <link type="text/css" href="../static/vendor/@fortawesome/fontawesome-free/css/all.min.css" rel="stylesheet">
 
     <!-- Pixel CSS -->
     <link type="text/css" href="../static/css/neumorphism.css" rel="stylesheet">
-
-    <!-- NOTICE: You can use the _analytics.html partial to include production code specific code & trackers -->
-
 </head>
 
 <body>
     <main>
         <!-- Hero -->
         {% if user.is_authenticated %}
-
-        {% if user.is_student %}
-
-            <!-- HEADER -->
-            <header class="header-global">
-                <nav id="navbar-main" aria-label="Primary navigation"
-                    class="navbar navbar-main navbar-expand-lg navbar-theme-primary headroom navbar-light">
-                    <div class="container position-relative">
-                        <a href="/" class="btn btn-primary" style="color:black; font-weight:bold"></i> LaunchED</a>
-                        <div class="d-flex align-items-center">
-                            <a href="myCourses" class="btn btn-primary text-secondary mr-3"><i 
-                                class=" fas fa-book-open"></i> My Courses</a>
-                            <a href="profileUpdate" class="btn btn-primary text-secondary mr-3"><i
-                                    class="fas fa-user-astronaut"></i> Update Profile</a>
-                            <a href="profileDelete" class="btn btn-primary text-secondary mr-3"><i
-                                    class="far fa-paper-plane mr-2"></i> Delete Profile</a>
-                            <a href="../logout" class="btn btn-primary text-secondary mr-3"><i
-                                    class="far fa-paper-plane mr-2"></i> Log out</a>
-                            <button class="navbar-toggler ml-2" type="button" data-toggle="collapse"
-                                data-target="#navbar_global" aria-controls="navbar_global" aria-expanded="false"
-                                aria-label="Toggle navigation">
-                                <span class="navbar-toggler-icon"></span>
-                            </button>
+            {% if user.is_student %}
+                <!-- HEADER -->
+                <header class="header-global">
+                    <nav id="navbar-main" aria-label="Primary navigation"
+                        class="navbar navbar-main navbar-expand-lg navbar-theme-primary headroom navbar-light">
+                        <div class="container position-relative">
+                            <a href="/" class="btn btn-primary" style="color:black; font-weight:bold"></i> LaunchED</a>
+                            <div class="d-flex align-items-center">
+                                <a href="myCourses" class="btn btn-primary text-secondary mr-3"><i 
+                                    class=" fas fa-book-open"></i> My Courses</a>
+                                <a href="profileUpdate" class="btn btn-primary text-secondary mr-3"><i
+                                        class="fas fa-pen-alt"></i> Update Profile</a>
+                                <a href="profileDelete" class="btn btn-primary text-secondary mr-3"><i
+                                        class="fas fa-trash"></i> Delete Profile</a>
+                                <a href="../logout" class="btn btn-primary text-secondary mr-3"><i
+                                        class="fas fa-sign-out-alt"></i> Log out</a>
+                            </div>
                         </div>
-                    </div>
-                </nav>
-            </header>
-            <!-- END OF HEADER -->
-
-            <div class="section section-header pb-7">
-                <div class="container">
-                    <div class="row justify-content-center">
-                        <div class="col-12 col-lg-8 text-center">
-                            <h1 class="display-2 mb-4">Welcome! {{Students.fname}} {{Students.lname}}</h1>
+                    </nav>
+                </header>
+                <!-- END OF HEADER -->
+                <div class="section section-header pb-7">
+                    <div class="container">
+                        <div class="row justify-content-center">
+                            <div class="col-12 col-lg-8 text-center">
+                                <h1 class="display-2 mb-4">Welcome! {{Students.fname}} {{Students.lname}}</h1>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            <!-- End of Hero section -->
-            <section class="section section-lg pt-0">
-                <div class="container">
-                    <center>
+                <!-- End of Hero section -->
+                <section class="section section-lg pt-0">
+                    <div class="container">
                         <div class="row">
                             <div class="col-12 ">
                                 <!-- Profile Card -->
-                                <div class="card bg-primary shadow-soft border-light text-center py-4 mb-5">
-                                    <div
-                                        class="profile-image shadow-inset border border-light bg-primary rounded-circle p-3 mx-auto">
-                                        <img src="static/assets/img/team/profile-picture-1.jpg"
-                                            class="card-img-top shadow-soft p-2 border border-light rounded-circle"
-                                            alt="Neil Avatar">
+                                    <div class="card bg-primary shadow-soft border-light text-center py-4 mb-5">
+                                        <div
+                                            class="profile-image shadow-inset border border-light bg-primary rounded-circle p-3 mx-auto">
+                                            <img src="../static/images/user.png"
+                                                class="card-img-top shadow-soft p-2 border border-light rounded-circle"
+                                                alt="Student Image">
+                                        </div>
+                                        <div class="card-body">
+                                            <h3 class="h5 mb-2">{{Students.fname}} {{Students.lname}}</h3>
+                                            <ul class="list-unstyled justify-content-center mt-3 mb-4">
+                                                <li>
+                                                    <strong>Email ID:</strong> {{ Students.email }}
+                                                </li>
+                                                <li>
+                                                    <strong>Date of Birth:</strong> {{ Students.DOB }}
+                                                </li>
+                                                <li>
+                                                    <strong>Gender:</strong> {{ Students.sex }}
+                                                </li>
+                                                <li>
+                                                    <strong>Year of Study:</strong> {{Students.qualification}}
+                                                </li>
+                                                <li>
+                                                    <strong>Date of Joining:</strong> {{Students.datejoined}}
+                                                </li>
+                                                <li>
+                                                    <strong>Number of Courses Enrolled:</strong> {{user.enrolled_course_number}}
+                                                </li>
+                                            </ul>
+                                        </div>
                                     </div>
-                                    <div class="card-body">
-                                        <h3 class="h5 mb-2">{{Students.fname}} {{Students.lname}}</h3>
-                                        <ul class="list-unstyled justify-content-center mt-3 mb-4">
-                                            <li>
-                                                <strong>Email ID:</strong> {{ Students.email }}
-                                            </li>
-                                            <li>
-                                                <strong>Date of Birth:</strong> {{ Students.DOB }}
-                                            </li>
-                                            <li>
-                                                <strong>Gender:</strong> {{ Students.sex }}
-                                            </li>
-                                            <li>
-                                                <strong>Year of Study:</strong> {{Students.qualification}}
-                                            </li>
-                                            <li>
-                                                <strong>Date of Joining:</strong> {{Students.datejoined}}
-                                            </li>
-                                            <li>
-                                                <strong>Number of Courses Enrolled:</strong> {{user.enrolled_course_number}}
-                                            </li>
-                                            <li>
-                                                <strong>Enrolled Courses:</strong> <br>
-                                                {% for course in enrolled %}
-                                                <ul class="list-unstyled justify-content-center">
-                                                    <li><strong>{{course.course.name}}</strong>
-                                                            <a href="/profile/{{ course.id }}/" class="btn btn-primary text-secondary mr-3"><i 
-                                                                class=" fas fa-exclamation-circle"></i>Unroll</a><br>
-                                                                <button class="navbar-toggler ml-2" type="button" data-toggle="collapse"
-                                                                    data-target="#navbar_global" aria-controls="navbar_global" aria-expanded="false"
-                                                                    aria-label="Toggle navigation">
-                                                                    <span class="navbar-toggler-icon"></span>
-                                                                </button>
-                                                            </a>
-                                                    </li>
-                                                </ul>
-                                                {% endfor %}
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
                                 <!-- End of Profile Card -->
                             </div>
                         </div>
-                    </center>
-                </div>
-            </section>
+
+                        <div class="mb-4">
+                            <span class="h5">Enrolled Courses</span>
+                        </div>
+                        <div class="mb-5">
+                            <table class="table shadow-soft rounded">
+                                <tr>
+                                    <th class="border-0" scope="col" id="course">Course Name</th>
+                                    <th class="border-0" scope="col" id="decription">Course Description</th>
+                                    <th class="border-0" scope="col" id="action">Action</th>
+                                </tr>
+                                {% for course in enrolled %}
+                                    <tr>
+                                        <th scope="row">{{course.course.name}}</th>
+                                        <td scope="row" >{{course.course.description}}</td>
+                                        <th>
+                                            <a href="/profile/{{ course.id }}/" class="btn btn-primary text-secondary mr-3">
+                                                <i class=" fas fa-trash"></i>
+                                                Unroll
+                                            </a>
+                                        </th>
+                                    </tr>
+                                {% endfor %}
+                            </table>
+                        </div>
+                    </div>
+                </section>
             <!-- END OF STUDENT PROFILE -->
 
             <!-- START OF INSTRUCTOR PROFILE -->
-            {% elif user.is_instructor %}
-
+        {% elif user.is_instructor %}
             <!-- HEADER -->
             <header class="header-global">
                 <nav id="navbar-main" aria-label="Primary navigation"
@@ -199,22 +149,16 @@
                             <a href="createCourse" class="btn btn-primary text-secondary mr-3"><i 
                                 class=" fas fa-book-reader mr-2"></i>Add a new course</a>
                             <a href="profileUpdate" class="btn btn-primary text-secondary mr-3"><i
-                                    class="fas fa-user-astronaut"></i> Update Profile</a>
+                                    class="fas fa-pen-alt"></i> Update Profile</a>
                             <a href="profileDelete" class="btn btn-primary text-secondary mr-3"><i
-                                    class="far fa-paper-plane mr-2"></i> Delete Profile</a>
+                                    class="fas fa-trash"></i> Delete Profile</a>
                             <a href="../logout" class="btn btn-primary text-secondary mr-3"><i
-                                    class="far fa-paper-plane mr-2"></i> Log out</a>
-                            <button class="navbar-toggler ml-2" type="button" data-toggle="collapse"
-                                data-target="#navbar_global" aria-controls="navbar_global" aria-expanded="false"
-                                aria-label="Toggle navigation">
-                                <span class="navbar-toggler-icon"></span>
-                            </button>
+                                    class="fas fa-sign-out-alt"></i> Log out</a>
                         </div>
                     </div>
                 </nav>
             </header>
             <!-- END OF HEADER -->
-
             <div class="section section-header pb-7">
                 <div class="container">
                     <div class="row justify-content-center">
@@ -226,20 +170,19 @@
             <!-- End of Hero section -->
             <section class="section section-lg pt-0">
                 <div class="container">
-                    <center>
                         <div class="row">
                             <div class="col-12 ">
                                 <!-- Profile Card -->
                                 <div class="card bg-primary shadow-soft border-light text-center py-4 mb-5">
                                     <div
                                         class="profile-image shadow-inset border border-light bg-primary rounded-circle p-3 mx-auto">
-                                        <img src="static/assets/img/team/profile-picture-1.jpg"
+                                        <img src="../static/images/user.png"
                                             class="card-img-top shadow-soft p-2 border border-light rounded-circle"
-                                            alt="Neil Avatar">
+                                            alt="Instructor Image">
                                     </div>
                                     <div class="card-body">
                                         <h3 class="h5 mb-2">{{Instructors.fname}} {{Instructors.lname}}</h3>
-                                        <ul class="list-unstyled justify-content-center mt-3 mb-4">
+                                        <ul class="list-unstyled justify-content-center mt-3 mb-4" style=" padding-left:25%; padding-right:25%">
                                             <li>
                                                 <strong>Email ID:</strong> {{ Instructors.email }}
                                             </li>
@@ -261,59 +204,63 @@
                                             <li>
                                                 <strong>About you:</strong> {{Instructors.description}}
                                             </li>
-                                            <li>
-                                                <strong>Courses Published:</strong><br> 
-                                                {% for course in courses %}
-                                                <ul class="list-unstyled justify-content-center">
-                                                    <li>{{course.name}}<br>
-                                                    </li>
-                                                </ul>
-                                                {% endfor %}
-                                            </li>
                                         </ul>
                                     </div>
                                 </div>
                                 <!-- End of Profile Card -->
                             </div>
                         </div>
-                    </center>
+
+
+                    <div class="mb-4">
+                        <span class="h5">Courses Published</span>
+                    </div>
+                    <div class="mb-5">
+                        <table class="table shadow-soft rounded">
+                            <tr>
+                                <th class="border-0" scope="col" id="course">Course Name</th>
+                                <th class="border-0" scope="col" id="description">Course Description</th>
+                            </tr>
+                            {% for course in courses %}
+                            <tr>
+                                <th scope="row">{{course.name}}</th>
+                                <td scope="row" >{{course.description}}</td>
+                            </tr>
+                            {% endfor %}
+                        </table>
+                    </div>
                 </div>
             </section>
             <!-- END OF INSTRUCTOR PROFILE -->
-            
             {% endif %}
-
         {% endif %}
     </main>
     <!-- FOOTER -->
     <footer class="d-flex pb-5 pt-6 pt-md-7 border-top border-light bg-primary">
         <div class="container">
-            <div class="row">
-                <div class="col-md-10 col-lg-8">
-                    <div class="nav-wrapper position-relative mb-4">
-                        <ul class="nav nav-pills nav-fill flex-column flex-md-row" id="tabs-icon-text" role="tablist">
-                            <li class="nav-item">
-                                <a href="/" class="btn btn-primary"><i class="fas fa-tachometer-alt mr-2"></i>
-                                    About Us</a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="../contactUs" class="btn btn-primary"><i class="fas fa-headphones"></i>
-                                    Contact Us</a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="../termsOfUse" class="btn btn-primary"><i class="fas fa-book-open"></i>
-                                    Terms and Conditions</a>
-                            </li>
-                        </ul>
-                    </div>
+            <div class="col-md-12">
+                <div class="nav-wrapper position-relative">
+                    <ul class="nav nav-pills nav-fill flex-column flex-md-row">
+                        <li class="nav-item"><a class="nav-link mb-sm-3 mb-md-0" href="/">
+                            <span class="icon-success">
+                                <span class="fas fa-tachometer-alt mr-2"></span>About Us</span></a>
+                        </li>
+                        <li class="nav-item"><a class="nav-link mb-sm-3 mb-md-0" href="../contactUs">
+                            <span class="icon-success">
+                                <span class="fas fa-headphones"></span> Contact Us</span></a>
+                        </li>
+                        <li class="nav-item"><a class="nav-link mb-sm-3 mb-md-0" href="../termsOfUse">
+                            <span class="icon-success">
+                                <span class="fas fa-book-open"></span> Terms And Conditions</span></a>
+                        </li>
+                    </ul>
                 </div>
             </div>
             <hr class="my-5">
             <div class="row">
                 <div class="col">
                     <div class="d-flex text-center justify-content-center align-items-center" role="contentinfo">
-                        <p class="font-weight-normal font-small mb-0">made with ♥ by Mohammed Sanaullah and Tanmayi
-                            D.
+                        <p class="font-weight-normal font-small mb-0">made with ♥ by Mohammed Sanaullah and Tanmayi D.
                         </p>
                     </div>
                 </div>
